@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47D4B3A3C783B62E311C2D88 /* Pods_URJapan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9381816F9AE14E1BA79F2D55 /* Pods_URJapan.framework */; };
 		A01EE6491F69669B000E0A98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE6481F69669B000E0A98 /* main.m */; };
 		A01EE64C1F69669B000E0A98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE64B1F69669B000E0A98 /* AppDelegate.m */; };
 		A01EE64F1F69669B000E0A98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE64E1F69669B000E0A98 /* ViewController.m */; };
@@ -14,6 +15,7 @@
 		A01EE6541F69669B000E0A98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01EE6531F69669B000E0A98 /* Assets.xcassets */; };
 		A01EE6571F69669B000E0A98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01EE6551F69669B000E0A98 /* LaunchScreen.storyboard */; };
 		A01EE6621F69669B000E0A98 /* URJapanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE6611F69669B000E0A98 /* URJapanTests.m */; };
+		A01EE66E1F696A25000E0A98 /* URMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE66D1F696A25000E0A98 /* URMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DFBB5F6EC1D97CA7584E8ED /* Pods-URJapan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URJapan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-URJapan/Pods-URJapan.debug.xcconfig"; sourceTree = "<group>"; };
+		9381816F9AE14E1BA79F2D55 /* Pods_URJapan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URJapan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01EE6441F69669B000E0A98 /* URJapan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URJapan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01EE6481F69669B000E0A98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A01EE64A1F69669B000E0A98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,6 +44,9 @@
 		A01EE65D1F69669B000E0A98 /* URJapanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = URJapanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01EE6611F69669B000E0A98 /* URJapanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URJapanTests.m; sourceTree = "<group>"; };
 		A01EE6631F69669B000E0A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A01EE66C1F696A25000E0A98 /* URMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URMainViewController.h; sourceTree = "<group>"; };
+		A01EE66D1F696A25000E0A98 /* URMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URMainViewController.m; sourceTree = "<group>"; };
+		CBC7219585B1F32692B4BB89 /* Pods-URJapan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URJapan.release.xcconfig"; path = "Pods/Target Support Files/Pods-URJapan/Pods-URJapan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47D4B3A3C783B62E311C2D88 /* Pods_URJapan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +68,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10431E20EFE284716EBD965F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9381816F9AE14E1BA79F2D55 /* Pods_URJapan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		23B2B5D7BE75168C6F538DCB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1DFBB5F6EC1D97CA7584E8ED /* Pods-URJapan.debug.xcconfig */,
+				CBC7219585B1F32692B4BB89 /* Pods-URJapan.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A01EE63B1F69669B000E0A98 = {
 			isa = PBXGroup;
 			children = (
 				A01EE6461F69669B000E0A98 /* URJapan */,
 				A01EE6601F69669B000E0A98 /* URJapanTests */,
 				A01EE6451F69669B000E0A98 /* Products */,
+				23B2B5D7BE75168C6F538DCB /* Pods */,
+				10431E20EFE284716EBD965F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +117,8 @@
 				A01EE6551F69669B000E0A98 /* LaunchScreen.storyboard */,
 				A01EE6581F69669B000E0A98 /* Info.plist */,
 				A01EE6471F69669B000E0A98 /* Supporting Files */,
+				A01EE66C1F696A25000E0A98 /* URMainViewController.h */,
+				A01EE66D1F696A25000E0A98 /* URMainViewController.m */,
 			);
 			path = URJapan;
 			sourceTree = "<group>";
@@ -118,9 +147,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A01EE6661F69669B000E0A98 /* Build configuration list for PBXNativeTarget "URJapan" */;
 			buildPhases = (
+				2AFEA6877532289074452CEA /* [CP] Check Pods Manifest.lock */,
 				A01EE6401F69669B000E0A98 /* Sources */,
 				A01EE6411F69669B000E0A98 /* Frameworks */,
 				A01EE6421F69669B000E0A98 /* Resources */,
+				FFD4CA2FDE94FDE22AD27372 /* [CP] Embed Pods Frameworks */,
+				FC745578EDC039AA07BF2397 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,11 +242,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2AFEA6877532289074452CEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-URJapan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC745578EDC039AA07BF2397 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-URJapan/Pods-URJapan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFD4CA2FDE94FDE22AD27372 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-URJapan/Pods-URJapan-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-URJapan/Pods-URJapan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A01EE6401F69669B000E0A98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A01EE66E1F696A25000E0A98 /* URMainViewController.m in Sources */,
 				A01EE64F1F69669B000E0A98 /* ViewController.m in Sources */,
 				A01EE64C1F69669B000E0A98 /* AppDelegate.m in Sources */,
 				A01EE6491F69669B000E0A98 /* main.m in Sources */,
@@ -353,6 +440,7 @@
 		};
 		A01EE6671F69669B000E0A98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DFBB5F6EC1D97CA7584E8ED /* Pods-URJapan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PJD5F25QWG;
@@ -367,6 +455,7 @@
 		};
 		A01EE6681F69669B000E0A98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBC7219585B1F32692B4BB89 /* Pods-URJapan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PJD5F25QWG;
