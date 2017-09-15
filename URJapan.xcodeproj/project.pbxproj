@@ -17,6 +17,7 @@
 		A01EE6621F69669B000E0A98 /* URJapanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE6611F69669B000E0A98 /* URJapanTests.m */; };
 		A01EE66E1F696A25000E0A98 /* URMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE66D1F696A25000E0A98 /* URMainViewController.m */; };
 		A05E8A171F6BCDC7009CF6EB /* URLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A05E8A161F6BCDC7009CF6EB /* URLogger.m */; };
+		A05E8A1C1F6BEDCC009CF6EB /* luanch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A05E8A1B1F6BEDCC009CF6EB /* luanch.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A01EE66D1F696A25000E0A98 /* URMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URMainViewController.m; sourceTree = "<group>"; };
 		A05E8A151F6BCDC7009CF6EB /* URLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLogger.h; sourceTree = "<group>"; };
 		A05E8A161F6BCDC7009CF6EB /* URLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLogger.m; sourceTree = "<group>"; };
+		A05E8A1B1F6BEDCC009CF6EB /* luanch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = luanch.jpg; sourceTree = "<group>"; };
 		CBC7219585B1F32692B4BB89 /* Pods-URJapan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URJapan.release.xcconfig"; path = "Pods/Target Support Files/Pods-URJapan/Pods-URJapan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,10 +113,10 @@
 		A01EE6461F69669B000E0A98 /* URJapan */ = {
 			isa = PBXGroup;
 			children = (
+				A05E8A1A1F6BEDCC009CF6EB /* Resource */,
 				A05E8A0E1F6BCD72009CF6EB /* config */,
 				A05E8A0F1F6BCD72009CF6EB /* Logic */,
 				A05E8A101F6BCD72009CF6EB /* Module */,
-				A05E8A111F6BCD72009CF6EB /* resource */,
 				A05E8A121F6BCD72009CF6EB /* Utils */,
 				A05E8A131F6BCD72009CF6EB /* vender */,
 				A05E8A141F6BCD73009CF6EB /* View */,
@@ -171,13 +173,6 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
-		A05E8A111F6BCD72009CF6EB /* resource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = resource;
-			sourceTree = "<group>";
-		};
 		A05E8A121F6BCD72009CF6EB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +194,14 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A05E8A1A1F6BEDCC009CF6EB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A05E8A1B1F6BEDCC009CF6EB /* luanch.jpg */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A05E8A1C1F6BEDCC009CF6EB /* luanch.jpg in Resources */,
 				A01EE6571F69669B000E0A98 /* LaunchScreen.storyboard in Resources */,
 				A01EE6541F69669B000E0A98 /* Assets.xcassets in Resources */,
 				A01EE6521F69669B000E0A98 /* Main.storyboard in Resources */,
@@ -511,6 +515,7 @@
 			baseConfigurationReference = 1DFBB5F6EC1D97CA7584E8ED /* Pods-URJapan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URJapan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -526,6 +531,7 @@
 			baseConfigurationReference = CBC7219585B1F32692B4BB89 /* Pods-URJapan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URJapan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

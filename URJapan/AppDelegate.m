@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "URMainViewController.h"
 #import "URLogger.h"
+#import "URMainViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,12 @@
     // Override point for customization after application launch.
     
     [URLogger shareObject];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    URMainViewController *viewController = [[URMainViewController alloc] init];
+    self.window.rootViewController = viewController;
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
