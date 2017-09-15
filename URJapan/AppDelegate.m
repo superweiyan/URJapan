@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "URMainViewController.h"
+#import "URLogger.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [URLogger shareObject];
+    
     return YES;
 }
 

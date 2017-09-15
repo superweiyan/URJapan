@@ -7,6 +7,7 @@
 //
 
 #import "URMainViewController.h"
+#import "URLogger.h"
 
 @interface URMainViewController ()<UITabBarDelegate>
 
@@ -27,7 +28,7 @@
     [self addChildViewController:lessionController andTitle:@"首页" andImageName:nil];
     [self addChildViewController:discoverController andTitle:@"发现" andImageName:nil];
     
-    self.tabBar.delegate = self;
+    LOGGER(@"12345667788");
 }
 
 - (void)didReceiveMemoryWarning {

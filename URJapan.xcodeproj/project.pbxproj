@@ -16,6 +16,7 @@
 		A01EE6571F69669B000E0A98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01EE6551F69669B000E0A98 /* LaunchScreen.storyboard */; };
 		A01EE6621F69669B000E0A98 /* URJapanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE6611F69669B000E0A98 /* URJapanTests.m */; };
 		A01EE66E1F696A25000E0A98 /* URMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE66D1F696A25000E0A98 /* URMainViewController.m */; };
+		A05E8A171F6BCDC7009CF6EB /* URLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A05E8A161F6BCDC7009CF6EB /* URLogger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		A01EE6631F69669B000E0A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A01EE66C1F696A25000E0A98 /* URMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URMainViewController.h; sourceTree = "<group>"; };
 		A01EE66D1F696A25000E0A98 /* URMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URMainViewController.m; sourceTree = "<group>"; };
+		A05E8A151F6BCDC7009CF6EB /* URLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLogger.h; sourceTree = "<group>"; };
+		A05E8A161F6BCDC7009CF6EB /* URLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLogger.m; sourceTree = "<group>"; };
 		CBC7219585B1F32692B4BB89 /* Pods-URJapan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URJapan.release.xcconfig"; path = "Pods/Target Support Files/Pods-URJapan/Pods-URJapan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +111,13 @@
 		A01EE6461F69669B000E0A98 /* URJapan */ = {
 			isa = PBXGroup;
 			children = (
+				A05E8A0E1F6BCD72009CF6EB /* config */,
+				A05E8A0F1F6BCD72009CF6EB /* Logic */,
+				A05E8A101F6BCD72009CF6EB /* Module */,
+				A05E8A111F6BCD72009CF6EB /* resource */,
+				A05E8A121F6BCD72009CF6EB /* Utils */,
+				A05E8A131F6BCD72009CF6EB /* vender */,
+				A05E8A141F6BCD73009CF6EB /* View */,
 				A01EE64A1F69669B000E0A98 /* AppDelegate.h */,
 				A01EE64B1F69669B000E0A98 /* AppDelegate.m */,
 				A01EE64D1F69669B000E0A98 /* ViewController.h */,
@@ -138,6 +148,57 @@
 				A01EE6631F69669B000E0A98 /* Info.plist */,
 			);
 			path = URJapanTests;
+			sourceTree = "<group>";
+		};
+		A05E8A0E1F6BCD72009CF6EB /* config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		A05E8A0F1F6BCD72009CF6EB /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		A05E8A101F6BCD72009CF6EB /* Module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		A05E8A111F6BCD72009CF6EB /* resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		A05E8A121F6BCD72009CF6EB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A05E8A131F6BCD72009CF6EB /* vender */ = {
+			isa = PBXGroup;
+			children = (
+				A05E8A151F6BCDC7009CF6EB /* URLogger.h */,
+				A05E8A161F6BCDC7009CF6EB /* URLogger.m */,
+			);
+			path = vender;
+			sourceTree = "<group>";
+		};
+		A05E8A141F6BCD73009CF6EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A05E8A171F6BCDC7009CF6EB /* URLogger.m in Sources */,
 				A01EE66E1F696A25000E0A98 /* URMainViewController.m in Sources */,
 				A01EE64F1F69669B000E0A98 /* ViewController.m in Sources */,
 				A01EE64C1F69669B000E0A98 /* AppDelegate.m in Sources */,
@@ -519,6 +581,7 @@
 				A01EE6681F69669B000E0A98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A01EE6691F69669B000E0A98 /* Build configuration list for PBXNativeTarget "URJapanTests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +590,7 @@
 				A01EE66B1F69669B000E0A98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

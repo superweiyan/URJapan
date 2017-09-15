@@ -11,4 +11,5 @@ target 'URJapan' do
 	pod 'FMDB'
 	pod 'SVPullToRefresh'
 	pod 'AppleReachability'
+	pod 'SSZipArchive'
 end
