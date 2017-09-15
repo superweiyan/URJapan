@@ -10,6 +10,7 @@
 #import "URMainViewController.h"
 #import "URLogger.h"
 #import "URMainViewController.h"
+#import "URSplashView.h"
 
 @interface AppDelegate ()
 
@@ -29,6 +30,8 @@
     self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
     
+    [self checkSplash];
+
     return YES;
 }
 
@@ -59,5 +62,11 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)checkSplash
+{
+    URSplashView * splashView = [[URSplashView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    splashView.backgroundColor = [UIColor grayColor];
+    [[UIApplication sharedApplication].keyWindow addSubview:splashView];
+}
 
 @end
