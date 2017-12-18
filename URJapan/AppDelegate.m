@@ -30,7 +30,7 @@
     self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
     
-    [self checkSplash];
+//    [self checkSplash];
 
     return YES;
 }

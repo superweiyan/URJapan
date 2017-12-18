@@ -12,4 +12,5 @@ target 'URJapan' do
 	pod 'SVPullToRefresh'
 	pod 'AppleReachability'
 	pod 'SSZipArchive'
+	pod 'Masonry'
 end

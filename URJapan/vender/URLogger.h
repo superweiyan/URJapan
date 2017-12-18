@@ -15,7 +15,6 @@ typedef NS_ENUM(NSUInteger, URLoggerLevelType) {
 };
 
 #define LOGGER(__Info__) [URLogger log:__Info__ tag:@""  func:NSStringFromSelector(_cmd) line:__LINE__];
-
 #define LOGGER_TAG(__Info__, __Tag__) [URLogger log:__Info__ tag:__Tag__  func:__FUNCTION__ line:__LINE__];
 
 @interface URLogger : NSObject

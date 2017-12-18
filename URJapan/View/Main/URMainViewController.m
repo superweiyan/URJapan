@@ -8,6 +8,7 @@
 
 #import "URMainViewController.h"
 #import "URLogger.h"
+#import "URMainPageViewController.h"
 
 @interface URMainViewController ()<UITabBarDelegate>
 
@@ -19,16 +20,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIViewController    *lessionController  = [[UIViewController alloc] init];
-    lessionController.view.backgroundColor = [UIColor redColor];
+    URMainPageViewController *lessionController  = [[URMainPageViewController alloc] init];
     
     UIViewController    *discoverController = [[UIViewController alloc] init];
-    discoverController.view.backgroundColor = [UIColor blueColor];
     
     [self addChildViewController:lessionController andTitle:@"首页" andImageName:nil];
     [self addChildViewController:discoverController andTitle:@"发现" andImageName:nil];
     
-    LOGGER(@"12345667788");
+//    LOGGER(@"12345667788");
 }
 
 - (void)didReceiveMemoryWarning {

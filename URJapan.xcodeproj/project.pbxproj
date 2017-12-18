@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		47D4B3A3C783B62E311C2D88 /* Pods_URJapan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9381816F9AE14E1BA79F2D55 /* Pods_URJapan.framework */; };
+		6E0ED9281FE797B5004084CE /* URMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0ED9271FE797B5004084CE /* URMainPageViewController.m */; };
 		A01EE6491F69669B000E0A98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE6481F69669B000E0A98 /* main.m */; };
 		A01EE64C1F69669B000E0A98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE64B1F69669B000E0A98 /* AppDelegate.m */; };
 		A01EE64F1F69669B000E0A98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE64E1F69669B000E0A98 /* ViewController.m */; };
@@ -34,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		1DFBB5F6EC1D97CA7584E8ED /* Pods-URJapan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URJapan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-URJapan/Pods-URJapan.debug.xcconfig"; sourceTree = "<group>"; };
+		6E0ED9261FE797B5004084CE /* URMainPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMainPageViewController.h; sourceTree = "<group>"; };
+		6E0ED9271FE797B5004084CE /* URMainPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMainPageViewController.m; sourceTree = "<group>"; };
 		9381816F9AE14E1BA79F2D55 /* Pods_URJapan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URJapan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01EE6441F69669B000E0A98 /* URJapan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URJapan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01EE6481F69669B000E0A98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,6 +99,44 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6E0ED9241FE79784004084CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6E0ED9251FE797A3004084CE /* MainPage */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6E0ED9251FE797A3004084CE /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				6E0ED9261FE797B5004084CE /* URMainPageViewController.h */,
+				6E0ED9271FE797B5004084CE /* URMainPageViewController.m */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		6E2421411FDE374E00B5792B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		6E2421421FDE378000B5792B /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		6E2421431FDE378B00B5792B /* Module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
 		A01EE63B1F69669B000E0A98 = {
 			isa = PBXGroup;
 			children = (
@@ -119,10 +160,11 @@
 		A01EE6461F69669B000E0A98 /* URJapan */ = {
 			isa = PBXGroup;
 			children = (
+				6E0ED9241FE79784004084CE /* Controller */,
+				6E2421431FDE378B00B5792B /* Module */,
+				6E2421421FDE378000B5792B /* Logic */,
+				6E2421411FDE374E00B5792B /* Config */,
 				A05E8A1A1F6BEDCC009CF6EB /* Resource */,
-				A05E8A0E1F6BCD72009CF6EB /* config */,
-				A05E8A0F1F6BCD72009CF6EB /* Logic */,
-				A05E8A101F6BCD72009CF6EB /* Module */,
 				A05E8A121F6BCD72009CF6EB /* Utils */,
 				A05E8A131F6BCD72009CF6EB /* vender */,
 				A05E8A141F6BCD73009CF6EB /* View */,
@@ -154,27 +196,6 @@
 				A01EE6631F69669B000E0A98 /* Info.plist */,
 			);
 			path = URJapanTests;
-			sourceTree = "<group>";
-		};
-		A05E8A0E1F6BCD72009CF6EB /* config */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = config;
-			sourceTree = "<group>";
-		};
-		A05E8A0F1F6BCD72009CF6EB /* Logic */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Logic;
-			sourceTree = "<group>";
-		};
-		A05E8A101F6BCD72009CF6EB /* Module */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Module;
 			sourceTree = "<group>";
 		};
 		A05E8A121F6BCD72009CF6EB /* Utils */ = {
@@ -282,7 +303,7 @@
 				TargetAttributes = {
 					A01EE6431F69669B000E0A98 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = CAGU5L98ZV;
+						DevelopmentTeam = PJD5F25QWG;
 						ProvisioningStyle = Automatic;
 					};
 					A01EE65C1F69669B000E0A98 = {
@@ -349,7 +370,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FC745578EDC039AA07BF2397 /* [CP] Copy Pods Resources */ = {
@@ -375,15 +396,21 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-URJapan/Pods-URJapan-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/AppleReachability/AppleReachability.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
 				"${BUILT_PRODUCTS_DIR}/SVPullToRefresh/SVPullToRefresh.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppleReachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVPullToRefresh.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +430,7 @@
 				A080921A1F6C3AC8007CFAE2 /* URSplashView.m in Sources */,
 				A01EE64F1F69669B000E0A98 /* ViewController.m in Sources */,
 				A01EE64C1F69669B000E0A98 /* AppDelegate.m in Sources */,
+				6E0ED9281FE797B5004084CE /* URMainPageViewController.m in Sources */,
 				A080921D1F6C3DA2007CFAE2 /* URCountDownBtn.m in Sources */,
 				A01EE6491F69669B000E0A98 /* main.m in Sources */,
 			);
@@ -544,7 +572,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = CAGU5L98ZV;
+				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URJapan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -560,7 +588,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = CAGU5L98ZV;
+				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URJapan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
