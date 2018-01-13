@@ -13,6 +13,7 @@
 #import "Masonry.h"
 #import "URSystemUtils.h"
 #import "URPhonogramItemCollectionViewCell.h"
+#import "URAudioPlayer.h"
 
 @interface URPhonogramViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 {
@@ -20,6 +21,8 @@
     
     UICollectionView  *_phonogramCollect;
 }
+
+@property (nonatomic, strong) URAudioPlayer     *audioPlayer;
 @end
 
 @implementation URPhonogramViewController
@@ -67,6 +70,14 @@
     }];
 }
 
+- (URAudioPlayer *)audioPlayer
+{
+    if (!_audioPlayer) {
+        _audioPlayer = [[URAudioPlayer alloc] init];
+    }
+    return _audioPlayer;
+}
+
 - (void)loadData
 {
     _phonogramArray = [[URService shareObbject].phonogramService getFiftyPhonogram];
@@ -85,6 +96,10 @@
     if (indexPath.row < _phonogramArray.count) {
         URPhonogramModel *model = [_phonogramArray objectAtIndex:indexPath.row];
         [cell updateData:model showMode:URShowMode_Kata];
+        WeakSelf();
+        cell.playCallback = ^(NSString * audioKey) {
+            [weakSelf playAudio:audioKey];
+        };
     }
     return cell;
 }
@@ -117,6 +132,14 @@
 //    return CGSizeMake(60, 60);
 //}
 
+#pragma mark - helper
+
+- (void)playAudio:(NSString *)audioKey
+{
+    NSString *audioFile = [NSString stringWithFormat:@"%@.wav", audioKey];
+     NSString *path = [[NSBundle mainBundle] pathForResource:audioFile ofType:nil];
+    [self.audioPlayer playAudioFromPath:path];
+}
 
 
 @end

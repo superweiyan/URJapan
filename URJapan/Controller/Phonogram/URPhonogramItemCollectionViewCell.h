@@ -15,9 +15,13 @@ typedef NS_ENUM(NSUInteger, URShowMode) {
     URShowMode_Hiragana = 1
 };
 
+typedef void (^playAudioForInfoCallback)(NSString *);
+
 @interface URPhonogramItemCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, assign) CGPoint       touchPoint;
+
+@property (nonatomic, copy) playAudioForInfoCallback  playCallback;
 
 - (void)updateData:(URPhonogramModel *)model showMode:(URShowMode)mode;
 

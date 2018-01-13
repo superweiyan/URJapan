@@ -21,3 +21,8 @@
 #pragma mark - log
 
 #define FunctionName()  NSLog(@"%s", __FUNCTION__);
+
+#pragma mark - callback
+
+#define WeakSelf()  __weak __typeof__(self) weakSelf = self
+#define SafetyCallblock(block, ...) if((block)) { block(__VA_ARGS__); }

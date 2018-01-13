@@ -126,6 +126,8 @@
 		6EFC02EF2009F1CE00D44DA4 /* myo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6EFC02862009F1CE00D44DA4 /* myo.wav */; };
 		6EFC02F02009F1CE00D44DA4 /* he.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6EFC02872009F1CE00D44DA4 /* he.wav */; };
 		6EFC02F12009F1CE00D44DA4 /* ki.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6EFC02882009F1CE00D44DA4 /* ki.wav */; };
+		6EFC02F52009F7C200D44DA4 /* URAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC02F42009F7C200D44DA4 /* URAudioPlayer.m */; };
+		6EFC02F7200A08AA00D44DA4 /* a.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6EFC02F6200A08AA00D44DA4 /* a.wav */; };
 		A01EE6491F69669B000E0A98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE6481F69669B000E0A98 /* main.m */; };
 		A01EE64C1F69669B000E0A98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE64B1F69669B000E0A98 /* AppDelegate.m */; };
 		A01EE64F1F69669B000E0A98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE64E1F69669B000E0A98 /* ViewController.m */; };
@@ -282,6 +284,9 @@
 		6EFC02862009F1CE00D44DA4 /* myo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = myo.wav; sourceTree = "<group>"; };
 		6EFC02872009F1CE00D44DA4 /* he.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = he.wav; sourceTree = "<group>"; };
 		6EFC02882009F1CE00D44DA4 /* ki.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ki.wav; sourceTree = "<group>"; };
+		6EFC02F32009F7C200D44DA4 /* URAudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URAudioPlayer.h; sourceTree = "<group>"; };
+		6EFC02F42009F7C200D44DA4 /* URAudioPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URAudioPlayer.m; sourceTree = "<group>"; };
+		6EFC02F6200A08AA00D44DA4 /* a.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = a.wav; sourceTree = "<group>"; };
 		9381816F9AE14E1BA79F2D55 /* Pods_URJapan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URJapan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01EE6441F69669B000E0A98 /* URJapan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URJapan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01EE6481F69669B000E0A98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -427,6 +432,7 @@
 		6EFC021F2009F1CE00D44DA4 /* PhonogramAudio */ = {
 			isa = PBXGroup;
 			children = (
+				6EFC02F6200A08AA00D44DA4 /* a.wav */,
 				6EFC02202009F1CE00D44DA4 /* myu.wav */,
 				6EFC02212009F1CE00D44DA4 /* sho.wav */,
 				6EFC02222009F1CE00D44DA4 /* su.wav */,
@@ -536,6 +542,15 @@
 			path = PhonogramAudio;
 			sourceTree = "<group>";
 		};
+		6EFC02F22009F7AE00D44DA4 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				6EFC02F32009F7C200D44DA4 /* URAudioPlayer.h */,
+				6EFC02F42009F7C200D44DA4 /* URAudioPlayer.m */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		A01EE63B1F69669B000E0A98 = {
 			isa = PBXGroup;
 			children = (
@@ -600,6 +615,7 @@
 		A05E8A121F6BCD72009CF6EB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6EFC02F22009F7AE00D44DA4 /* Audio */,
 				6EFC0207200764D900D44DA4 /* Category */,
 				A080921B1F6C3DA2007CFAE2 /* URCountDownBtn.h */,
 				A080921C1F6C3DA2007CFAE2 /* URCountDownBtn.m */,
@@ -761,6 +777,7 @@
 				6EFC02892009F1CE00D44DA4 /* myu.wav in Resources */,
 				6EFC02CF2009F1CE00D44DA4 /* bya.wav in Resources */,
 				6EFC02D82009F1CE00D44DA4 /* be.wav in Resources */,
+				6EFC02F7200A08AA00D44DA4 /* a.wav in Resources */,
 				A05E8A1C1F6BEDCC009CF6EB /* luanch.jpg in Resources */,
 				6EFC02C72009F1CE00D44DA4 /* wa.wav in Resources */,
 				6EFC02B52009F1CE00D44DA4 /* nya.wav in Resources */,
@@ -952,6 +969,7 @@
 				6E0ED9281FE797B5004084CE /* URMainPageViewController.m in Sources */,
 				6E0ED9311FE7B7C3004084CE /* URMarco.m in Sources */,
 				A080921D1F6C3DA2007CFAE2 /* URCountDownBtn.m in Sources */,
+				6EFC02F52009F7C200D44DA4 /* URAudioPlayer.m in Sources */,
 				6EFC01FE200711A200D44DA4 /* URPhonogramService.m in Sources */,
 				6EFC0212200867E900D44DA4 /* URService.m in Sources */,
 				A01EE6491F69669B000E0A98 /* main.m in Sources */,

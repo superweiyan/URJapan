@@ -21,6 +21,8 @@
 @property (nonatomic, strong) UILongPressGestureRecognizer *longRecognizer;
 @property (nonatomic, strong) UITapGestureRecognizer        *tapGestureRecognizer;
 
+@property (nonatomic, strong) URPhonogramModel  *model;
+
 @end
 
 @implementation URPhonogramItemCollectionViewCell
@@ -66,6 +68,8 @@
 
 - (void)updateData:(URPhonogramModel *)model showMode:(URShowMode)mode
 {
+    self.model = model;
+    
     if (mode == URShowMode_Kata) {
         self.riyuLabel.text = model.kata;
     }
@@ -112,11 +116,14 @@
         return ;
     }
     self.hadLongGesture = NO;
+    
+    FunctionName();
 }
 
 - (void)onTapRecognizer:(UITapGestureRecognizer *)gesture
 {
     FunctionName();
+    SafetyCallblock(self.playCallback, self.model.phonogram);
 }
 
 @end
