@@ -8,6 +8,7 @@
 
 #import "URMainPageViewController.h"
 #import "Masonry/Masonry.h"
+#import "URMarco.h"
 
 @interface URMainPageViewController ()<UITableViewDelegate, UITableViewDataSource>
 {
@@ -86,6 +87,13 @@
         cell.textLabel.text = lessionName;
     }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0) {
+        [self.navigationController pushViewController:NewController(@"URPhonogramViewController") animated:YES];
+    }
 }
 
 @end
