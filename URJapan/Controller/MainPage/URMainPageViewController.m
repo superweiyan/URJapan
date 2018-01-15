@@ -66,7 +66,7 @@
 
 - (void)initData
 {
-    _dataArray = @[@"50音图", @"语法"];
+    _dataArray = @[@"50音图", @"语法", @"我"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

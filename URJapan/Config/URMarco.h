@@ -26,3 +26,7 @@
 
 #define WeakSelf()  __weak __typeof__(self) weakSelf = self
 #define SafetyCallblock(block, ...) if((block)) { block(__VA_ARGS__); }
+
+#pragma mark - init
+
+#define URStrongPropert @property (nonatomic, strong)

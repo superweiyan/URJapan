@@ -9,6 +9,8 @@
 #import "URMainViewController.h"
 #import "URLogger.h"
 #import "URMainPageViewController.h"
+#import "URMeSettingViewController.h"
+#import "URNavigationController.h"
 
 @interface URMainViewController ()<UITabBarDelegate>
 
@@ -24,8 +26,11 @@
     
     UIViewController    *discoverController = [[UIViewController alloc] init];
     
+    URMeSettingViewController *settingController = [[URMeSettingViewController alloc] init];
+    
     [self addChildViewController:lessionController andTitle:@"首页" andImageName:nil];
     [self addChildViewController:discoverController andTitle:@"发现" andImageName:nil];
+    [self addChildViewController:settingController andTitle:@"我" andImageName:nil];
     
 //    LOGGER(@"12345667788");
 }
@@ -40,14 +45,18 @@
     VC.title=title;
     
     VC.tabBarItem.image=[UIImage imageNamed:[NSString stringWithFormat:@"%@nor",imageName]];
-    
     VC.tabBarItem.selectedImage=[UIImage imageNamed:[NSString stringWithFormat:@"%@press",imageName]];
     
     self.tabBar.tintColor=[UIColor colorWithRed:13/255.0 green:184/255.0 blue:246/255.0 alpha:1];
     
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:VC];
-    
+    URNavigationController *nav = [[URNavigationController alloc] initWithRootViewController:VC];
     [self addChildViewController:nav];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+//    self.hidesBottomBarWhenPushed = NO;
 }
 
 /*
@@ -68,7 +77,7 @@
     else if ([item.title isEqualToString:@"发现"]){
         
     }
-    else {
+    else if ([item.title isEqualToString:@"我"]){
         
     }
 }

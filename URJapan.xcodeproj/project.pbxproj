@@ -128,6 +128,9 @@
 		6EFC02F12009F1CE00D44DA4 /* ki.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6EFC02882009F1CE00D44DA4 /* ki.wav */; };
 		6EFC02F52009F7C200D44DA4 /* URAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC02F42009F7C200D44DA4 /* URAudioPlayer.m */; };
 		6EFC02F7200A08AA00D44DA4 /* a.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6EFC02F6200A08AA00D44DA4 /* a.wav */; };
+		6EFC02FE200C4C9E00D44DA4 /* URMeSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC02FD200C4C9E00D44DA4 /* URMeSettingViewController.m */; };
+		6EFC0302200C4FFF00D44DA4 /* URLabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC0301200C4FFF00D44DA4 /* URLabViewController.m */; };
+		6EFC0306200C511B00D44DA4 /* URNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC0305200C511B00D44DA4 /* URNavigationController.m */; };
 		A01EE6491F69669B000E0A98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE6481F69669B000E0A98 /* main.m */; };
 		A01EE64C1F69669B000E0A98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE64B1F69669B000E0A98 /* AppDelegate.m */; };
 		A01EE64F1F69669B000E0A98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE64E1F69669B000E0A98 /* ViewController.m */; };
@@ -287,6 +290,12 @@
 		6EFC02F32009F7C200D44DA4 /* URAudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URAudioPlayer.h; sourceTree = "<group>"; };
 		6EFC02F42009F7C200D44DA4 /* URAudioPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URAudioPlayer.m; sourceTree = "<group>"; };
 		6EFC02F6200A08AA00D44DA4 /* a.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = a.wav; sourceTree = "<group>"; };
+		6EFC02FC200C4C9E00D44DA4 /* URMeSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMeSettingViewController.h; sourceTree = "<group>"; };
+		6EFC02FD200C4C9E00D44DA4 /* URMeSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMeSettingViewController.m; sourceTree = "<group>"; };
+		6EFC0300200C4FFF00D44DA4 /* URLabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLabViewController.h; sourceTree = "<group>"; };
+		6EFC0301200C4FFF00D44DA4 /* URLabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLabViewController.m; sourceTree = "<group>"; };
+		6EFC0304200C511B00D44DA4 /* URNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URNavigationController.h; sourceTree = "<group>"; };
+		6EFC0305200C511B00D44DA4 /* URNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URNavigationController.m; sourceTree = "<group>"; };
 		9381816F9AE14E1BA79F2D55 /* Pods_URJapan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URJapan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01EE6441F69669B000E0A98 /* URJapan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URJapan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01EE6481F69669B000E0A98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -352,6 +361,8 @@
 		6E0ED9241FE79784004084CE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6EFC0303200C50EA00D44DA4 /* URNavigationController */,
+				6EFC02FB200C4C8300D44DA4 /* Me */,
 				6E0ED92A1FE7ABA4004084CE /* Phonogram */,
 				6E0ED9251FE797A3004084CE /* MainPage */,
 			);
@@ -549,6 +560,34 @@
 				6EFC02F42009F7C200D44DA4 /* URAudioPlayer.m */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		6EFC02FB200C4C8300D44DA4 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				6EFC02FF200C4FF200D44DA4 /* Lab */,
+				6EFC02FC200C4C9E00D44DA4 /* URMeSettingViewController.h */,
+				6EFC02FD200C4C9E00D44DA4 /* URMeSettingViewController.m */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		6EFC02FF200C4FF200D44DA4 /* Lab */ = {
+			isa = PBXGroup;
+			children = (
+				6EFC0300200C4FFF00D44DA4 /* URLabViewController.h */,
+				6EFC0301200C4FFF00D44DA4 /* URLabViewController.m */,
+			);
+			path = Lab;
+			sourceTree = "<group>";
+		};
+		6EFC0303200C50EA00D44DA4 /* URNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				6EFC0304200C511B00D44DA4 /* URNavigationController.h */,
+				6EFC0305200C511B00D44DA4 /* URNavigationController.m */,
+			);
+			path = URNavigationController;
 			sourceTree = "<group>";
 		};
 		A01EE63B1F69669B000E0A98 = {
@@ -956,12 +995,15 @@
 				6EFC020620075A2100D44DA4 /* URPhonogramModel.m in Sources */,
 				A05E8A171F6BCDC7009CF6EB /* URLogger.m in Sources */,
 				A08092161F6C3A7D007CFAE2 /* URMainViewController.m in Sources */,
+				6EFC02FE200C4C9E00D44DA4 /* URMeSettingViewController.m in Sources */,
 				A080921A1F6C3AC8007CFAE2 /* URSplashView.m in Sources */,
 				6EFC021A2008988D00D44DA4 /* URPhonogramItemCollectionViewCell.m in Sources */,
 				6EFC020320075A0300D44DA4 /* URPhonogramType.m in Sources */,
+				6EFC0302200C4FFF00D44DA4 /* URLabViewController.m in Sources */,
 				6EFC020A2007687E00D44DA4 /* NSDictionary+URUtil.m in Sources */,
 				6E0ED92D1FE7ABB9004084CE /* URPhonogramViewController.m in Sources */,
 				A01EE64F1F69669B000E0A98 /* ViewController.m in Sources */,
+				6EFC0306200C511B00D44DA4 /* URNavigationController.m in Sources */,
 				6EFC021E2008E9FE00D44DA4 /* URPhonogramView.m in Sources */,
 				A01EE64C1F69669B000E0A98 /* AppDelegate.m in Sources */,
 				6EFC02152008926D00D44DA4 /* URSystemUtils.m in Sources */,
