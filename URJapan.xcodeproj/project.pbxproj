@@ -131,6 +131,7 @@
 		6EFC02FE200C4C9E00D44DA4 /* URMeSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC02FD200C4C9E00D44DA4 /* URMeSettingViewController.m */; };
 		6EFC0302200C4FFF00D44DA4 /* URLabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC0301200C4FFF00D44DA4 /* URLabViewController.m */; };
 		6EFC0306200C511B00D44DA4 /* URNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC0305200C511B00D44DA4 /* URNavigationController.m */; };
+		6EFC030A200C883B00D44DA4 /* URToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC0309200C883B00D44DA4 /* URToast.m */; };
 		A01EE6491F69669B000E0A98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE6481F69669B000E0A98 /* main.m */; };
 		A01EE64C1F69669B000E0A98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE64B1F69669B000E0A98 /* AppDelegate.m */; };
 		A01EE64F1F69669B000E0A98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01EE64E1F69669B000E0A98 /* ViewController.m */; };
@@ -296,6 +297,8 @@
 		6EFC0301200C4FFF00D44DA4 /* URLabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLabViewController.m; sourceTree = "<group>"; };
 		6EFC0304200C511B00D44DA4 /* URNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URNavigationController.h; sourceTree = "<group>"; };
 		6EFC0305200C511B00D44DA4 /* URNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URNavigationController.m; sourceTree = "<group>"; };
+		6EFC0308200C883B00D44DA4 /* URToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URToast.h; sourceTree = "<group>"; };
+		6EFC0309200C883B00D44DA4 /* URToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URToast.m; sourceTree = "<group>"; };
 		9381816F9AE14E1BA79F2D55 /* Pods_URJapan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URJapan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01EE6441F69669B000E0A98 /* URJapan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URJapan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01EE6481F69669B000E0A98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -590,6 +593,15 @@
 			path = URNavigationController;
 			sourceTree = "<group>";
 		};
+		6EFC0307200C882900D44DA4 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				6EFC0308200C883B00D44DA4 /* URToast.h */,
+				6EFC0309200C883B00D44DA4 /* URToast.m */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		A01EE63B1F69669B000E0A98 = {
 			isa = PBXGroup;
 			children = (
@@ -613,6 +625,7 @@
 		A01EE6461F69669B000E0A98 /* URJapan */ = {
 			isa = PBXGroup;
 			children = (
+				6EFC0307200C882900D44DA4 /* Component */,
 				6E0ED9241FE79784004084CE /* Controller */,
 				6E2421431FDE378B00B5792B /* Module */,
 				6E2421421FDE378000B5792B /* Logic */,
@@ -1006,6 +1019,7 @@
 				6EFC0306200C511B00D44DA4 /* URNavigationController.m in Sources */,
 				6EFC021E2008E9FE00D44DA4 /* URPhonogramView.m in Sources */,
 				A01EE64C1F69669B000E0A98 /* AppDelegate.m in Sources */,
+				6EFC030A200C883B00D44DA4 /* URToast.m in Sources */,
 				6EFC02152008926D00D44DA4 /* URSystemUtils.m in Sources */,
 				6EFC01FB20070DDB00D44DA4 /* URConfigHelper.m in Sources */,
 				6E0ED9281FE797B5004084CE /* URMainPageViewController.m in Sources */,
