@@ -11,6 +11,10 @@
 		6E0ED9281FE797B5004084CE /* URMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0ED9271FE797B5004084CE /* URMainPageViewController.m */; };
 		6E0ED92D1FE7ABB9004084CE /* URPhonogramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0ED92C1FE7ABB9004084CE /* URPhonogramViewController.m */; };
 		6E0ED9311FE7B7C3004084CE /* URMarco.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0ED9301FE7B7C3004084CE /* URMarco.m */; };
+		6E39212A20121F1300F4CA7A /* URExerciseContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E39212920121F1300F4CA7A /* URExerciseContentsViewController.m */; };
+		6E3921312012E67F00F4CA7A /* URSwitchCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3921302012E67F00F4CA7A /* URSwitchCardView.m */; };
+		6E392134201317B900F4CA7A /* URCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E392133201317B900F4CA7A /* URCard.m */; };
+		6EBF7783200E35A300790305 /* NSString+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBF7782200E35A300790305 /* NSString+helper.m */; };
 		6EFC01FB20070DDB00D44DA4 /* URConfigHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC01FA20070DDB00D44DA4 /* URConfigHelper.m */; };
 		6EFC01FE200711A200D44DA4 /* URPhonogramService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC01FD200711A200D44DA4 /* URPhonogramService.m */; };
 		6EFC020320075A0300D44DA4 /* URPhonogramType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC020220075A0300D44DA4 /* URPhonogramType.m */; };
@@ -164,6 +168,14 @@
 		6E0ED92C1FE7ABB9004084CE /* URPhonogramViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URPhonogramViewController.m; sourceTree = "<group>"; };
 		6E0ED92F1FE7B7C3004084CE /* URMarco.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMarco.h; sourceTree = "<group>"; };
 		6E0ED9301FE7B7C3004084CE /* URMarco.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMarco.m; sourceTree = "<group>"; };
+		6E39212820121F1300F4CA7A /* URExerciseContentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URExerciseContentsViewController.h; sourceTree = "<group>"; };
+		6E39212920121F1300F4CA7A /* URExerciseContentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URExerciseContentsViewController.m; sourceTree = "<group>"; };
+		6E39212F2012E67F00F4CA7A /* URSwitchCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URSwitchCardView.h; sourceTree = "<group>"; };
+		6E3921302012E67F00F4CA7A /* URSwitchCardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URSwitchCardView.m; sourceTree = "<group>"; };
+		6E392132201317B900F4CA7A /* URCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URCard.h; sourceTree = "<group>"; };
+		6E392133201317B900F4CA7A /* URCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URCard.m; sourceTree = "<group>"; };
+		6EBF7781200E35A300790305 /* NSString+helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+helper.h"; sourceTree = "<group>"; };
+		6EBF7782200E35A300790305 /* NSString+helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+helper.m"; sourceTree = "<group>"; };
 		6EFC01F920070DDB00D44DA4 /* URConfigHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URConfigHelper.h; sourceTree = "<group>"; };
 		6EFC01FA20070DDB00D44DA4 /* URConfigHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URConfigHelper.m; sourceTree = "<group>"; };
 		6EFC01FC200711A200D44DA4 /* URPhonogramService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URPhonogramService.h; sourceTree = "<group>"; };
@@ -364,6 +376,7 @@
 		6E0ED9241FE79784004084CE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6E39212720121EA900F4CA7A /* Exercise */,
 				6EFC0303200C50EA00D44DA4 /* URNavigationController */,
 				6EFC02FB200C4C8300D44DA4 /* Me */,
 				6E0ED92A1FE7ABA4004084CE /* Phonogram */,
@@ -425,11 +438,33 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
+		6E39212720121EA900F4CA7A /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				6E39212820121F1300F4CA7A /* URExerciseContentsViewController.h */,
+				6E39212920121F1300F4CA7A /* URExerciseContentsViewController.m */,
+			);
+			path = Exercise;
+			sourceTree = "<group>";
+		};
+		6E39212E2012E58900F4CA7A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6E39212F2012E67F00F4CA7A /* URSwitchCardView.h */,
+				6E3921302012E67F00F4CA7A /* URSwitchCardView.m */,
+				6E392132201317B900F4CA7A /* URCard.h */,
+				6E392133201317B900F4CA7A /* URCard.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		6EFC0207200764D900D44DA4 /* Category */ = {
 			isa = PBXGroup;
 			children = (
 				6EFC02082007687E00D44DA4 /* NSDictionary+URUtil.h */,
 				6EFC02092007687E00D44DA4 /* NSDictionary+URUtil.m */,
+				6EBF7781200E35A300790305 /* NSString+helper.h */,
+				6EBF7782200E35A300790305 /* NSString+helper.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -667,6 +702,7 @@
 		A05E8A121F6BCD72009CF6EB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6E39212E2012E58900F4CA7A /* Views */,
 				6EFC02F22009F7AE00D44DA4 /* Audio */,
 				6EFC0207200764D900D44DA4 /* Category */,
 				A080921B1F6C3DA2007CFAE2 /* URCountDownBtn.h */,
@@ -1017,12 +1053,16 @@
 				6E0ED92D1FE7ABB9004084CE /* URPhonogramViewController.m in Sources */,
 				A01EE64F1F69669B000E0A98 /* ViewController.m in Sources */,
 				6EFC0306200C511B00D44DA4 /* URNavigationController.m in Sources */,
+				6E392134201317B900F4CA7A /* URCard.m in Sources */,
 				6EFC021E2008E9FE00D44DA4 /* URPhonogramView.m in Sources */,
+				6E39212A20121F1300F4CA7A /* URExerciseContentsViewController.m in Sources */,
 				A01EE64C1F69669B000E0A98 /* AppDelegate.m in Sources */,
 				6EFC030A200C883B00D44DA4 /* URToast.m in Sources */,
+				6EBF7783200E35A300790305 /* NSString+helper.m in Sources */,
 				6EFC02152008926D00D44DA4 /* URSystemUtils.m in Sources */,
 				6EFC01FB20070DDB00D44DA4 /* URConfigHelper.m in Sources */,
 				6E0ED9281FE797B5004084CE /* URMainPageViewController.m in Sources */,
+				6E3921312012E67F00F4CA7A /* URSwitchCardView.m in Sources */,
 				6E0ED9311FE7B7C3004084CE /* URMarco.m in Sources */,
 				A080921D1F6C3DA2007CFAE2 /* URCountDownBtn.m in Sources */,
 				6EFC02F52009F7C200D44DA4 /* URAudioPlayer.m in Sources */,

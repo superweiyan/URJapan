@@ -66,12 +66,12 @@
 
 - (void)initData
 {
-    _dataArray = @[@"50音图", @"语法", @"我"];
+    _dataArray = @[@"50音图", @"语法", @"闯关练习"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return _dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -93,6 +93,9 @@
 {
     if (indexPath.row == 0) {
         [self.navigationController pushViewController:NewController(@"URPhonogramViewController") animated:YES];
+    }
+    else if (indexPath.row == 2) {
+        [self.navigationController pushViewController:NewController(@"URExerciseContentsViewController") animated:YES];
     }
 }
 

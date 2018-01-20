@@ -60,7 +60,7 @@
     collectionLayout.sectionInset = UIEdgeInsetsMake(0, 10, 0, 10);
     _phonogramCollect = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:collectionLayout];
     [_phonogramCollect registerClass:[URPhonogramItemCollectionViewCell class] forCellWithReuseIdentifier:@"defaultCell"];
-    _phonogramCollect.backgroundColor = URWhiteColor;
+    _phonogramCollect.backgroundColor = URWhiteColor();
     _phonogramCollect.delegate = self;
     _phonogramCollect.dataSource = self;
     [self.view addSubview:_phonogramCollect];

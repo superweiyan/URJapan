@@ -15,7 +15,7 @@
 
 #pragma mark - UIColor
 
-#define URWhiteColor  [UIColor whiteColor]
+#define URWhiteColor()  [UIColor whiteColor]
 
 
 #pragma mark - log
@@ -30,3 +30,8 @@
 #pragma mark - init
 
 #define URStrongPropert @property (nonatomic, strong)
+
+#pragma mark - rect
+
+#define URScreenWidth() [UIScreen mainScreen].bounds.size.width
+#define URScreenHeight() [UIScreen mainScreen].bounds.size.height
