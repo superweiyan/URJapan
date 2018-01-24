@@ -8,6 +8,7 @@
 
 #import "URCard.h"
 #import "Masonry.h"
+#import "URLessionModel.h"
 
 @interface URCard()
 
@@ -46,10 +47,11 @@
         make.top.mas_equalTo(self);
         make.left.mas_equalTo(self);
         make.right.mas_equalTo(self);
-        make.height.mas_equalTo(MAX(self.bounds.size.width, self.bounds.size.height));
+        make.height.mas_equalTo(100);
     }];
     
     self.tipLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    self.tipLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:self.tipLabel];
     
     [self.tipLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -68,15 +70,18 @@
     }];
 }
 
-- (void)updateInfo:(UIImage *)image title:(NSString *)title
+- (void)updateData:(URLessionModel *)model
 {
-    self.title = title;
+    self.title = model.lessionName;
+    NSString *imageName = [[NSBundle mainBundle] pathForResource:model.iconName ofType:nil];
+    self.logoImage.image = [UIImage imageWithContentsOfFile:imageName];
+    self.tipLabel.text = model.lessionName;
 }
 
 - (void)onClicked:(id)sender
 {
     if (self.callback) {
-        self.callback(self.title);
+        self.callback(self.tag);
     }
 }
 

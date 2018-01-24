@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^onSwitchCardView)(NSUInteger index);
+
 @interface URSwitchCardView : UIView
+
+@property (nonatomic, copy) onSwitchCardView switchCardCallback;
 
 - (void)updateData:(NSArray *)array;
 

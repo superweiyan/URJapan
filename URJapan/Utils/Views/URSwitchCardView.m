@@ -8,6 +8,8 @@
 
 #import "URSwitchCardView.h"
 #import "URCard.h"
+#import "URLessionModel.h"
+#import "URMarco.h"
 
 static float viewScale = 0.70f;
 
@@ -82,14 +84,17 @@ static float viewScale = 0.70f;
         //第一步 在ScrollView上添加卡片
         float viewX = [self startX] + i*([self cardWidth] + [self margin]);
         URCard * card = [[URCard alloc] initWithFrame:CGRectMake(viewX, 0, [self cardWidth], self.bounds.size.height)];
-        card.layer.borderWidth = 1.0f;
+        URLessionModel *model = [array objectAtIndex:i];
+        [card updateData:model];
         card.tag = i;
-        UIColor *color = [array objectAtIndex:i];
-        card.backgroundColor = color;
-        
         [_cardsArray addObject:card];
         [_scrollView addSubview:card];
         [_scrollView setContentSize:CGSizeMake(card.frame.origin.x + [self cardWidth] + 2*[self margin], 0)];
+        
+        WeakSelf()
+        card.callback = ^(NSUInteger tag) {
+            [weakSelf onCardClick:tag];
+        };
     }
     //更新卡片的大小
     [self updateCardTransform];
@@ -164,6 +169,13 @@ static float viewScale = 0.70f;
         //设置卡片的缩放
         card.transform = CGAffineTransformMakeScale(1.0, scale);
     }
+}
+
+#pragma mark - callback
+
+- (void)onCardClick:(NSUInteger)tag
+{
+    SafetyCallblock(self.switchCardCallback, tag);
 }
 
 @end

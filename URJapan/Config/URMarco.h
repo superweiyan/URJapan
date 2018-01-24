@@ -24,7 +24,7 @@
 
 #pragma mark - callback
 
-#define WeakSelf()  __weak __typeof__(self) weakSelf = self
+#define WeakSelf()  __weak __typeof__(self) weakSelf = self;
 #define SafetyCallblock(block, ...) if((block)) { block(__VA_ARGS__); }
 
 #pragma mark - init
@@ -35,3 +35,7 @@
 
 #define URScreenWidth() [UIScreen mainScreen].bounds.size.width
 #define URScreenHeight() [UIScreen mainScreen].bounds.size.height
+
+#pragma mark - path
+
+#define ResourcePath(name) [[NSBundle mainBundle] pathForResource:name ofType:nil]

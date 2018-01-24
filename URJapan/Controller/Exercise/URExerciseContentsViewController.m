@@ -9,6 +9,7 @@
 #import "URExerciseContentsViewController.h"
 #import "URMarco.h"
 #import "URSwitchCardView.h"
+#import "URLessionModel.h"
 
 @interface URExerciseContentsViewController ()
 
@@ -41,18 +42,30 @@
 
 - (void)addLessions
 {
-    URSwitchCardView *cardView = [[URSwitchCardView alloc] initWithFrame:CGRectMake(10, 100, URScreenWidth() - 20, 100)];
+    URSwitchCardView *cardView = [[URSwitchCardView alloc] initWithFrame:CGRectMake(10, 100, URScreenWidth() - 20, 140)];
+    WeakSelf()
+    cardView.switchCardCallback = ^(NSUInteger index) {
+        [weakSelf onSwitchCardClick:index];
+    };
     [self.view addSubview:cardView];
     
-    UIColor *Color = [UIColor grayColor];
-    UIColor *Color1 = [UIColor purpleColor];
-    UIColor *Color2 = [UIColor blueColor];
-    UIColor *Color3 = [UIColor grayColor];
-    UIColor *Color4 = [UIColor blueColor];
+    NSArray *lessionTitleArray = @[@"五十音图", @"初级语法", @"N5单词"];
     
-    NSArray *array = @[Color, Color1, Color2, Color3, Color4];
-    [cardView updateData:array];
+    NSMutableArray *lessionArray = [[NSMutableArray alloc] init];
+    for (int i = 0; i < lessionTitleArray.count; i++) {
+        URLessionModel *lessionModel = [[URLessionModel alloc] init];
+        lessionModel.lessionName = [lessionTitleArray objectAtIndex:i];
+        lessionModel.iconName = @"50音图.jpg";
+        [lessionArray addObject:lessionModel];
+    }
+    [cardView updateData:lessionArray];
 }
 
+#pragma mark - logic
+
+- (void)onSwitchCardClick:(NSUInteger)index
+{
+    [self.navigationController pushViewController:NewController(@"URYintuExerciseViewController") animated:YES];
+}
 
 @end

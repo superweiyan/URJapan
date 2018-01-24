@@ -15,6 +15,10 @@
 		6E3921312012E67F00F4CA7A /* URSwitchCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3921302012E67F00F4CA7A /* URSwitchCardView.m */; };
 		6E392134201317B900F4CA7A /* URCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E392133201317B900F4CA7A /* URCard.m */; };
 		6EBF7783200E35A300790305 /* NSString+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBF7782200E35A300790305 /* NSString+helper.m */; };
+		6EEB590D20176D2200CA34D1 /* URLessionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEB590C20176D2100CA34D1 /* URLessionModel.m */; };
+		6EEB591120187F5500CA34D1 /* 50音图.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EEB591020187F5500CA34D1 /* 50音图.jpg */; };
+		6EEB59142018855400CA34D1 /* URYintuExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEB59132018855400CA34D1 /* URYintuExerciseViewController.m */; };
+		6EEB59162018913C00CA34D1 /* 闯关背景.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EEB59152018913B00CA34D1 /* 闯关背景.jpg */; };
 		6EFC01FB20070DDB00D44DA4 /* URConfigHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC01FA20070DDB00D44DA4 /* URConfigHelper.m */; };
 		6EFC01FE200711A200D44DA4 /* URPhonogramService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC01FD200711A200D44DA4 /* URPhonogramService.m */; };
 		6EFC020320075A0300D44DA4 /* URPhonogramType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC020220075A0300D44DA4 /* URPhonogramType.m */; };
@@ -176,6 +180,12 @@
 		6E392133201317B900F4CA7A /* URCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URCard.m; sourceTree = "<group>"; };
 		6EBF7781200E35A300790305 /* NSString+helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+helper.h"; sourceTree = "<group>"; };
 		6EBF7782200E35A300790305 /* NSString+helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+helper.m"; sourceTree = "<group>"; };
+		6EEB590B20176D2100CA34D1 /* URLessionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLessionModel.h; sourceTree = "<group>"; };
+		6EEB590C20176D2100CA34D1 /* URLessionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLessionModel.m; sourceTree = "<group>"; };
+		6EEB591020187F5500CA34D1 /* 50音图.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "50音图.jpg"; sourceTree = "<group>"; };
+		6EEB59122018855400CA34D1 /* URYintuExerciseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URYintuExerciseViewController.h; sourceTree = "<group>"; };
+		6EEB59132018855400CA34D1 /* URYintuExerciseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URYintuExerciseViewController.m; sourceTree = "<group>"; };
+		6EEB59152018913B00CA34D1 /* 闯关背景.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "闯关背景.jpg"; sourceTree = "<group>"; };
 		6EFC01F920070DDB00D44DA4 /* URConfigHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URConfigHelper.h; sourceTree = "<group>"; };
 		6EFC01FA20070DDB00D44DA4 /* URConfigHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URConfigHelper.m; sourceTree = "<group>"; };
 		6EFC01FC200711A200D44DA4 /* URPhonogramService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URPhonogramService.h; sourceTree = "<group>"; };
@@ -434,6 +444,8 @@
 				6EFC020220075A0300D44DA4 /* URPhonogramType.m */,
 				6EFC020420075A2100D44DA4 /* URPhonogramModel.h */,
 				6EFC020520075A2100D44DA4 /* URPhonogramModel.m */,
+				6EEB590B20176D2100CA34D1 /* URLessionModel.h */,
+				6EEB590C20176D2100CA34D1 /* URLessionModel.m */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -443,6 +455,8 @@
 			children = (
 				6E39212820121F1300F4CA7A /* URExerciseContentsViewController.h */,
 				6E39212920121F1300F4CA7A /* URExerciseContentsViewController.m */,
+				6EEB59122018855400CA34D1 /* URYintuExerciseViewController.h */,
+				6EEB59132018855400CA34D1 /* URYintuExerciseViewController.m */,
 			);
 			path = Exercise;
 			sourceTree = "<group>";
@@ -456,6 +470,15 @@
 				6E392133201317B900F4CA7A /* URCard.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		6EEB590F20187F5500CA34D1 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				6EEB59152018913B00CA34D1 /* 闯关背景.jpg */,
+				6EEB591020187F5500CA34D1 /* 50音图.jpg */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		6EFC0207200764D900D44DA4 /* Category */ = {
@@ -736,6 +759,7 @@
 		A05E8A1A1F6BEDCC009CF6EB /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				6EEB590F20187F5500CA34D1 /* Image */,
 				6EFC021F2009F1CE00D44DA4 /* PhonogramAudio */,
 				A05E8A1B1F6BEDCC009CF6EB /* luanch.jpg */,
 			);
@@ -902,6 +926,7 @@
 				A01EE6571F69669B000E0A98 /* LaunchScreen.storyboard in Resources */,
 				6EFC02D92009F1CE00D44DA4 /* ryo.wav in Resources */,
 				6EFC028F2009F1CE00D44DA4 /* ja.wav in Resources */,
+				6EEB59162018913C00CA34D1 /* 闯关背景.jpg in Resources */,
 				6EFC02D02009F1CE00D44DA4 /* za.wav in Resources */,
 				6EFC02E22009F1CE00D44DA4 /* ko.wav in Resources */,
 				6EFC02F02009F1CE00D44DA4 /* he.wav in Resources */,
@@ -940,6 +965,7 @@
 				6EFC02A62009F1CE00D44DA4 /* ka.wav in Resources */,
 				6EFC02E52009F1CE00D44DA4 /* gyu.wav in Resources */,
 				6EFC02AD2009F1CE00D44DA4 /* zo.wav in Resources */,
+				6EEB591120187F5500CA34D1 /* 50音图.jpg in Resources */,
 				6EFC02E72009F1CE00D44DA4 /* ri.wav in Resources */,
 				6EFC02ED2009F1CE00D44DA4 /* shu.wav in Resources */,
 				6EFC02E92009F1CE00D44DA4 /* sha.wav in Resources */,
@@ -1056,8 +1082,10 @@
 				6E392134201317B900F4CA7A /* URCard.m in Sources */,
 				6EFC021E2008E9FE00D44DA4 /* URPhonogramView.m in Sources */,
 				6E39212A20121F1300F4CA7A /* URExerciseContentsViewController.m in Sources */,
+				6EEB59142018855400CA34D1 /* URYintuExerciseViewController.m in Sources */,
 				A01EE64C1F69669B000E0A98 /* AppDelegate.m in Sources */,
 				6EFC030A200C883B00D44DA4 /* URToast.m in Sources */,
+				6EEB590D20176D2200CA34D1 /* URLessionModel.m in Sources */,
 				6EBF7783200E35A300790305 /* NSString+helper.m in Sources */,
 				6EFC02152008926D00D44DA4 /* URSystemUtils.m in Sources */,
 				6EFC01FB20070DDB00D44DA4 /* URConfigHelper.m in Sources */,

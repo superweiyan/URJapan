@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-typedef (^onURCardClicked) (NSString *);
+@class URLessionModel;
+
+typedef void (^onURCardClicked) (NSUInteger);
 
 @interface URCard : UIView
 
+- (void)updateData:(URLessionModel *)model;
+
 @property (nonatomic, copy) onURCardClicked callback;
 
-- (void)updateInfo:(UIImage *)image title:(NSString *)title;
+
 
 @end
