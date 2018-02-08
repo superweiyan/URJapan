@@ -10,12 +10,14 @@
 #import "URMarco.h"
 #import "URToast.h"
 #import "Masonry.h"
+#import "URYintuLearnViewController.h"
 
 @interface URLabViewController ()<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) UITableView *testItemTableView;
+@property (nonatomic, strong) UITableView       *testItemTableView;
 
-@property (nonatomic, strong) NSArray     *testItemArray;
+@property (nonatomic, strong) NSArray           *testItemArray;
+@property (nonatomic, strong) NSDictionary      *itemDict;
 
 @end
 
@@ -35,7 +37,10 @@
         make.edges.mas_equalTo(self.view);
     }];
     
-    self.testItemArray = @[@"toast"];
+    self.testItemArray = @[@"toast", @"学习页面"];
+    
+    self.itemDict = @{@"toast":NSStringFromSelector(@selector(testToast)),
+                      @"学习页面":NSStringFromSelector(@selector(studyView))};
     
     // Do any additional setup after loading the view.
 }
@@ -84,13 +89,29 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row < self.testItemArray.count) {
-        [self testToast];
+        NSString *title = [self.testItemArray objectAtIndex:indexPath.row];
+        NSString *selName = [self.itemDict objectForKey:title];
+        if (selName.length == 0) {
+            return ;
+        }
+        
+        SEL selector = NSSelectorFromString(selName);
+        if([self respondsToSelector:selector]){
+            [self performSelector:selector withObject:nil afterDelay:0];
+        }
     }
 }
-
 
 - (void)testToast
 {
     [URToast showTitle:@"hello"];
 }
+                                                   
+- (void)studyView
+{
+    URYintuLearnViewController *yintuViewController = [[URYintuLearnViewController alloc] init];
+    [self.navigationController pushViewController:yintuViewController animated:YES];
+    
+}
+
 @end

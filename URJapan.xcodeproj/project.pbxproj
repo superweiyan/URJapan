@@ -14,6 +14,9 @@
 		6E0ED9311FE7B7C3004084CE /* URMarco.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0ED9301FE7B7C3004084CE /* URMarco.m */; };
 		6E1F788A20284550002B1C9F /* LevelPath.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6EEB5920201A04D200CA34D1 /* LevelPath.geojson */; };
 		6E1F78902028480B002B1C9F /* URLevelSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1F788F2028480B002B1C9F /* URLevelSelectView.m */; };
+		6E1F789420284EE5002B1C9F /* URYintuLearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1F789320284EE5002B1C9F /* URYintuLearnViewController.m */; };
+		6E1F789B20284FF1002B1C9F /* URYintuTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1F789A20284FF1002B1C9F /* URYintuTestViewController.m */; };
+		6E1F78C9202C4314002B1C9F /* MFYintuLearnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1F78C8202C4314002B1C9F /* MFYintuLearnView.m */; };
 		6E39212A20121F1300F4CA7A /* URExerciseContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E39212920121F1300F4CA7A /* URExerciseContentsViewController.m */; };
 		6E3921312012E67F00F4CA7A /* URSwitchCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3921302012E67F00F4CA7A /* URSwitchCardView.m */; };
 		6E392134201317B900F4CA7A /* URCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E392133201317B900F4CA7A /* URCard.m */; };
@@ -179,6 +182,12 @@
 		6E0ED9301FE7B7C3004084CE /* URMarco.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMarco.m; sourceTree = "<group>"; };
 		6E1F788E2028480B002B1C9F /* URLevelSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLevelSelectView.h; sourceTree = "<group>"; };
 		6E1F788F2028480B002B1C9F /* URLevelSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLevelSelectView.m; sourceTree = "<group>"; };
+		6E1F789220284EE5002B1C9F /* URYintuLearnViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URYintuLearnViewController.h; sourceTree = "<group>"; };
+		6E1F789320284EE5002B1C9F /* URYintuLearnViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URYintuLearnViewController.m; sourceTree = "<group>"; };
+		6E1F789920284FF1002B1C9F /* URYintuTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URYintuTestViewController.h; sourceTree = "<group>"; };
+		6E1F789A20284FF1002B1C9F /* URYintuTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URYintuTestViewController.m; sourceTree = "<group>"; };
+		6E1F78C7202C4314002B1C9F /* MFYintuLearnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFYintuLearnView.h; sourceTree = "<group>"; };
+		6E1F78C8202C4314002B1C9F /* MFYintuLearnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFYintuLearnView.m; sourceTree = "<group>"; };
 		6E39212820121F1300F4CA7A /* URExerciseContentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URExerciseContentsViewController.h; sourceTree = "<group>"; };
 		6E39212920121F1300F4CA7A /* URExerciseContentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URExerciseContentsViewController.m; sourceTree = "<group>"; };
 		6E39212F2012E67F00F4CA7A /* URSwitchCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URSwitchCardView.h; sourceTree = "<group>"; };
@@ -424,6 +433,34 @@
 			path = Phonogram;
 			sourceTree = "<group>";
 		};
+		6E1F789120284EB5002B1C9F /* Learn */ = {
+			isa = PBXGroup;
+			children = (
+				6E1F78C6202C42F8002B1C9F /* Views */,
+				6E1F789220284EE5002B1C9F /* URYintuLearnViewController.h */,
+				6E1F789320284EE5002B1C9F /* URYintuLearnViewController.m */,
+			);
+			path = Learn;
+			sourceTree = "<group>";
+		};
+		6E1F789520284FA0002B1C9F /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				6E1F789920284FF1002B1C9F /* URYintuTestViewController.h */,
+				6E1F789A20284FF1002B1C9F /* URYintuTestViewController.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		6E1F78C6202C42F8002B1C9F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6E1F78C7202C4314002B1C9F /* MFYintuLearnView.h */,
+				6E1F78C8202C4314002B1C9F /* MFYintuLearnView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		6E2421411FDE374E00B5792B /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +498,8 @@
 		6E39212720121EA900F4CA7A /* Exercise */ = {
 			isa = PBXGroup;
 			children = (
+				6E1F789520284FA0002B1C9F /* Test */,
+				6E1F789120284EB5002B1C9F /* Learn */,
 				6E39212820121F1300F4CA7A /* URExerciseContentsViewController.h */,
 				6E39212920121F1300F4CA7A /* URExerciseContentsViewController.m */,
 				6EEB59122018855400CA34D1 /* URYintuExerciseViewController.h */,
@@ -1096,12 +1135,14 @@
 				6EFC0306200C511B00D44DA4 /* URNavigationController.m in Sources */,
 				6E392134201317B900F4CA7A /* URCard.m in Sources */,
 				6EFC021E2008E9FE00D44DA4 /* URPhonogramView.m in Sources */,
+				6E1F789B20284FF1002B1C9F /* URYintuTestViewController.m in Sources */,
 				6E39212A20121F1300F4CA7A /* URExerciseContentsViewController.m in Sources */,
 				6EEB59142018855400CA34D1 /* URYintuExerciseViewController.m in Sources */,
 				A01EE64C1F69669B000E0A98 /* AppDelegate.m in Sources */,
 				6EFC030A200C883B00D44DA4 /* URToast.m in Sources */,
 				6EEB590D20176D2200CA34D1 /* URLessionModel.m in Sources */,
 				6EBF7783200E35A300790305 /* NSString+helper.m in Sources */,
+				6E1F789420284EE5002B1C9F /* URYintuLearnViewController.m in Sources */,
 				6EFC02152008926D00D44DA4 /* URSystemUtils.m in Sources */,
 				6EFC01FB20070DDB00D44DA4 /* URConfigHelper.m in Sources */,
 				6E0ED9281FE797B5004084CE /* URMainPageViewController.m in Sources */,
@@ -1111,6 +1152,7 @@
 				6EFC02F52009F7C200D44DA4 /* URAudioPlayer.m in Sources */,
 				6E05DC272022032800B0DB8B /* URLevelPathHelper.m in Sources */,
 				6EFC01FE200711A200D44DA4 /* URPhonogramService.m in Sources */,
+				6E1F78C9202C4314002B1C9F /* MFYintuLearnView.m in Sources */,
 				6EFC0212200867E900D44DA4 /* URService.m in Sources */,
 				A01EE6491F69669B000E0A98 /* main.m in Sources */,
 			);

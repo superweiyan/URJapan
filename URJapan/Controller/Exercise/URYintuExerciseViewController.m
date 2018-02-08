@@ -79,11 +79,10 @@
 - (void)onBtnClicked:(id)sender
 {
     UIButton *btn = (UIButton *)sender;
-    NSUInteger tag = btn.tag;
-    
     URLevelSelectView *view = [[URLevelSelectView alloc] init];
     view.backgroundColor = [UIColor blueColor];
     [self.view addSubview:view];
+    view.level = btn.tag;;
     [view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(200, 150));
         make.centerX.mas_equalTo(self.view);
@@ -98,20 +97,20 @@
     self.selectView = view;
     
     WeakSelf()
-    view.levelClickback = ^(URLevelType type) {
+    view.levelClickback = ^(URLevelType type, NSUInteger level) {
         [weakSelf.selectView removeFromSuperview];
         weakSelf.selectView = nil;
-        [weakSelf jumpLevel:type];
+        [weakSelf jumpLevel:type level:level];
     };
 }
 
-- (void)jumpLevel:(URLevelType)levelType
+- (void)jumpLevel:(URLevelType)levelType level:(NSUInteger)level
 {
     if (levelType == URLevelType_Learn) {
-//        [self.navigationController pushViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#>]
+        [self.navigationController pushViewController:NewController(@"URYintuLearnViewController") animated:YES];
     }
     else if (levelType == URLevelType_Test) {
-        
+        [self.navigationController pushViewController:NewController(@"URYintuTestViewController") animated:YES];
     }
 }
 
