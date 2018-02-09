@@ -10,6 +10,7 @@
 #import "URMarco.h"
 #import "MFYintuLearnView.h"
 #import "Masonry/Masonry.h"
+#import "URLearnPhonogramModel.h"
 
 @interface URYintuLearnViewController ()
 
@@ -28,6 +29,7 @@
     // Do any additional setup after loading the view.
     DefaultBGColor()
     [self initViews];
+    [self loadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,6 +39,19 @@
 
 - (void)initViews
 {
+    self.prevBtn = [[UIButton alloc] initWithFrame:CGRectZero];
+    self.prevBtn.backgroundColor = [UIColor redColor];
+    [self.prevBtn addTarget:self
+                     action:@selector(onPrevBtnClicked:)
+           forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.prevBtn];
+    
+    [self.prevBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.mas_equalTo(self.view).mas_offset(-80);
+        make.left.mas_equalTo(self.view).mas_offset(100);
+        make.size.mas_equalTo(CGSizeMake(60, 40));
+    }];
+
     self.nextBtn = [[UIButton alloc] initWithFrame:CGRectZero];
     self.nextBtn.backgroundColor = [UIColor redColor];
     [self.nextBtn addTarget:self
@@ -44,14 +59,9 @@
            forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.nextBtn];
     
-    self.prevBtn = [[UIButton alloc] initWithFrame:CGRectZero];
-    self.prevBtn.backgroundColor = [UIColor redColor];
-    [self.prevBtn addTarget:self action:@selector(onPrevBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
-    
-    
     [self.nextBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(self.view).mas_offset(-50);
-        make.left.mas_equalTo(self.view).mas_offset(100);
+        make.bottom.mas_equalTo(self.view).mas_offset(-80);
+        make.left.mas_equalTo(self.prevBtn.mas_right).mas_offset(15);
         make.size.mas_equalTo(CGSizeMake(60, 40));
     }];
     
@@ -81,6 +91,11 @@
     
     self.viewsArray = @[firstLearnView, secondLearnView];
     self.currentTag = 0;
+}
+
+- (void)loadData
+{
+    
 }
 
 - (void)onNextBtcClicked:(id)sender
@@ -136,7 +151,7 @@
     self.currentTag = nextTag;
 }
 
-- (void)onPrevBtnClicked
+- (void)onPrevBtnClicked:(id)sender
 {
     
 }

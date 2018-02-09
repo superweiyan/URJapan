@@ -25,6 +25,7 @@
     self = [super init];
     if (self) {
         self.phonogramService = [[URPhonogramService alloc] init];
+        self.phonogramLearnService = [[URPhonogramLearnService alloc] init];
     }
     return self;
 }
