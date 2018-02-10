@@ -11,6 +11,8 @@
 #import "MFYintuLearnView.h"
 #import "Masonry/Masonry.h"
 #import "URLearnPhonogramModel.h"
+#import "URService.h"
+#import "URPhonogramLearnService.h"
 
 @interface URYintuLearnViewController ()
 
@@ -77,14 +79,12 @@
     
     [firstLearnView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view).mas_offset(100);
-//        make.left.mas_equalTo(self.view).mas_offset(100);
         make.centerX.mas_equalTo(self.view);
         make.size.mas_equalTo(CGSizeMake(300, 400));
     }];
     
     [secondLearnView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view).mas_offset(90);
-//        make.left.mas_equalTo(self.view).mas_offset(140);
         make.size.mas_equalTo(CGSizeMake(300, 400));
         make.centerX.mas_equalTo(self.view).mas_offset(20);
     }];
@@ -95,7 +95,7 @@
 
 - (void)loadData
 {
-    
+    [[URService shareObbject].phonogramLearnService getLearnPhonogramInfo:0];
 }
 
 - (void)onNextBtcClicked:(id)sender
@@ -111,7 +111,6 @@
 {
     UIView *learnView = [self.viewsArray objectAtIndex:self.currentTag];
     [learnView mas_updateConstraints:^(MASConstraintMaker *make) {
-//        make.left.mas_equalTo(self.view.mas_left).mas_offset(-learnView.frame.size.width);
         make.centerX.mas_equalTo(self.view).mas_offset(-learnView.frame.size.width - self.view.frame.size.width);
     }];
     [self.view layoutIfNeeded];
@@ -125,7 +124,6 @@
     
     UIView *currentView = [self.viewsArray objectAtIndex:self.currentTag];
     [currentView mas_updateConstraints:^(MASConstraintMaker *make) {
-//        make.left.mas_equalTo(self.view).mas_offset(160);
         make.centerX.mas_equalTo(self.view).mas_offset(40);
         make.top.mas_equalTo(self.view).mas_offset(110);
     }];
@@ -134,14 +132,12 @@
     [UIView animateWithDuration:0.5 animations:^{
         [nextView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.view).mas_offset(90);
-//            make.left.mas_equalTo(self.view).mas_offset(100);
             make.centerX.mas_equalTo(self.view);
         }];
         
         
         [currentView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.view).mas_offset(100);
-//            make.left.mas_equalTo(self.view).mas_offset(140);
             make.centerX.mas_equalTo(self.view).mas_equalTo(20);
         }];
         

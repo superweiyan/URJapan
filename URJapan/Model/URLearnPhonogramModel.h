@@ -15,3 +15,11 @@
 @property (nonatomic, strong) NSArray           *exampleArray;
 
 @end
+
+
+@interface URPhonogramExampleModel : NSObject
+
+@property (nonatomic, strong) NSString *phonogram;
+@property (nonatomic, strong) NSString *chinaDesc;
+
+@end

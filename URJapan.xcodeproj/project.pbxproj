@@ -22,6 +22,7 @@
 		6E1F78DD202DA1E9002B1C9F /* URPhonogramModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1F78DA202DA1E9002B1C9F /* URPhonogramModel.m */; };
 		6E1F78E0202DA295002B1C9F /* URLearnPhonogramModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1F78DF202DA295002B1C9F /* URLearnPhonogramModel.m */; };
 		6E1F78E3202DA48F002B1C9F /* URPhonogramLearnService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1F78E2202DA48F002B1C9F /* URPhonogramLearnService.m */; };
+		6E1F78EE202EFD49002B1C9F /* URPhonogramLessionConfig.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6E1F78E7202DC538002B1C9F /* URPhonogramLessionConfig.geojson */; };
 		6E39212A20121F1300F4CA7A /* URExerciseContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E39212920121F1300F4CA7A /* URExerciseContentsViewController.m */; };
 		6E3921312012E67F00F4CA7A /* URSwitchCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3921302012E67F00F4CA7A /* URSwitchCardView.m */; };
 		6E392134201317B900F4CA7A /* URCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E392133201317B900F4CA7A /* URCard.m */; };
@@ -943,6 +944,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E1F78EE202EFD49002B1C9F /* URPhonogramLessionConfig.geojson in Resources */,
 				6E1F788A20284550002B1C9F /* LevelPath.geojson in Resources */,
 				6EFC02C42009F1CE00D44DA4 /* ba.wav in Resources */,
 				6EFC02C52009F1CE00D44DA4 /* nu.wav in Resources */,

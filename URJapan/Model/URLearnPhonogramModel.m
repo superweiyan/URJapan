@@ -11,3 +11,7 @@
 @implementation URLearnPhonogramModel
 
 @end
+
+@implementation URPhonogramExampleModel
+
+@end
