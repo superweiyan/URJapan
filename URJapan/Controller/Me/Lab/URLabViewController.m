@@ -11,6 +11,7 @@
 #import "URToast.h"
 #import "Masonry.h"
 #import "URYintuLearnViewController.h"
+#import "URTTSTestView.h"
 
 @interface URLabViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -37,10 +38,12 @@
         make.edges.mas_equalTo(self.view);
     }];
     
-    self.testItemArray = @[@"toast", @"学习页面"];
+    self.testItemArray = @[@"toast", @"学习页面", @"播放文本声音"];
     
     self.itemDict = @{@"toast":NSStringFromSelector(@selector(testToast)),
-                      @"学习页面":NSStringFromSelector(@selector(studyView))};
+                      @"学习页面":NSStringFromSelector(@selector(studyView)),
+                      @"播放文本声音":NSStringFromSelector(@selector(TTSTest))
+                      };
     
     // Do any additional setup after loading the view.
 }
@@ -111,7 +114,14 @@
 {
     URYintuLearnViewController *yintuViewController = [[URYintuLearnViewController alloc] init];
     [self.navigationController pushViewController:yintuViewController animated:YES];
-    
 }
+
+- (void)TTSTest
+{    
+    URTTSTestView * testView = [[URTTSTestView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    testView.backgroundColor = [UIColor whiteColor];
+    [[UIApplication sharedApplication].keyWindow addSubview:testView];
+}
+
 
 @end

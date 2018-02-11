@@ -10,6 +10,8 @@
 #import "URLearnPhonogramModel.h"
 #import "URConfigHelper.h"
 #import "NSDictionary+URUtil.h"
+#import "URPhonogramService.h"
+#import "URService.h"
 
 @interface URPhonogramLearnService()
 
@@ -29,11 +31,27 @@
     return self;
 }
 
-- (URLearnPhonogramModel *)getLearnPhonogramInfo:(NSUInteger)level
+- (URLearnPhonogramModel *)getLearnPhonogramItemInfo:(NSString *)key
 {
+    URPhonogramModel * model = [[URService shareObbject].phonogramService getPhonogramInfo:key];
+    NSArray *exampleModel = [self.exampleDict objectForKey:key];
     
-    
-    return nil;
+    URLearnPhonogramModel *learnModel = [[URLearnPhonogramModel alloc] init];
+    learnModel.phonogramModel = model;
+    learnModel.exampleArray = exampleModel;
+    return learnModel;
+}
+
+- (NSArray *)getLearnLevelArray:(NSUInteger)level
+{
+    NSMutableArray *levelArray = [[NSMutableArray alloc] init];
+    for (int i = 0; i <= level; i++) {
+        NSString *key = [NSString stringWithFormat:@"level%ld", level];
+        NSArray *array = [self.levelDict objectForKey:key];
+        
+        [levelArray addObjectsFromArray:array];
+    }
+    return levelArray;
 }
 
 #pragma mark - load
@@ -55,11 +73,7 @@
         NSString *key = [NSString stringWithFormat:@"level%d", i];
         NSArray *data = [info getArrayForKey:key];
         [self.levelDict setObject:data forKey:key];
-        for (int j = 0; i < j; j++) {
-
-        }
     }
-    
     [self parseData:info];
 }
 

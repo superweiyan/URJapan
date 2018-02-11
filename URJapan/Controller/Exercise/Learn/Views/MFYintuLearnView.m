@@ -8,6 +8,7 @@
 
 #import "MFYintuLearnView.h"
 #import "Masonry/Masonry.h"
+#import "URLearnPhonogramModel.h"
 
 @interface MFYintuLearnView()
 
@@ -15,6 +16,8 @@
 @property (nonatomic, strong) UILabel       *wordLabel;
 @property (nonatomic, strong) UIButton      *changeBtn;
 @property (nonatomic, strong) UITextView    *textView;
+
+//@property (nonatomic, assign) NSUInteger
 
 @end
 
@@ -37,10 +40,11 @@
     return self;
 }
 
+#pragma mark - init
+
 - (void)initViews
 {
     self.phonogramLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-    self.phonogramLabel.backgroundColor = [UIColor yellowColor];
     self.phonogramLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:self.phonogramLabel];
     
@@ -91,6 +95,29 @@
         make.right.mas_equalTo(self).mas_offset(-15);
         make.bottom.mas_equalTo(self).mas_offset(-15);
     }];
+}
+
+- (void)updateInfo
+{
+    self.phonogramLabel.text = self.phonogramModel.phonogramModel.phonogram;
+    self.wordLabel.text = self.phonogramModel.phonogramModel.kata;
+    NSMutableString *str = [[NSMutableString alloc] init];
+    for (int i = 0; i < self.phonogramModel.exampleArray.count; i++) {
+        URPhonogramExampleModel *exampleModel = [self.phonogramModel.exampleArray objectAtIndex:i];
+        [str appendString:exampleModel.phonogram];
+        [str appendString:@"\n"];
+        [str appendString:exampleModel.chinaDesc];
+        [str appendString:@"\n"];
+    }
+    self.textView.text = str;
+}
+
+#pragma mark - public
+
+- (void)setPhonogramModel:(URLearnPhonogramModel *)phonogramModel
+{
+    _phonogramModel = phonogramModel;
+    [self updateInfo];
 }
 
 #pragma mark - action

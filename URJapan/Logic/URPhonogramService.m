@@ -13,9 +13,7 @@
 
 @interface URPhonogramService()
 
-@property (nonatomic, strong) NSDictionary *phonogramDict;
-@property (nonatomic, strong) NSArray       *phonogramArray;
-@property (nonatomic, strong) NSArray       *phonogramHorizontalArray;
+@property (nonatomic, strong) NSMutableDictionary    *phonogramDict;
 
 @end
 
@@ -26,38 +24,69 @@
     self = [super init];
     if (self) {
         [self initData];
+        [self loadData];
     }
     return self;
 }
 
 - (void)initData
 {
-    self.phonogramArray = @[@"a", @"i", @"u", @"e", @"o"];
+    self.vowelArray = @[@"a", @"i", @"u", @"e", @"o"];
     self.phonogramHorizontalArray = @[@"a", @"k", @"s", @"t", @"n", @"h", @"m", @"y", @"r", @"w"];
 }
 
-- (NSDictionary *)phonogramDict
+- (void)loadData
 {
-    if (!_phonogramDict) {
-        _phonogramDict = [URConfigHelper getConfigFromName:@"Kana.config.geojson"];
-    }
-    return _phonogramDict;
-}
-
-- (NSArray *)getFiftyPhonogram
-{
-    NSMutableArray * phonogramArray = [[NSMutableArray alloc] init];
+    NSDictionary *json = [URConfigHelper getConfigFromName:@"Kana.config.geojson"];
+    
+    self.phonogramArray = [[NSMutableArray alloc] init];
+    
     for (int i = 0; i < self.phonogramHorizontalArray.count; i++) {
         NSString *val = [self.phonogramHorizontalArray objectAtIndex:i];
-        NSArray *itemArray = [self.phonogramDict objectForKey:val];
+        NSArray *itemArray = [json objectForKey:val];
         
         for (int j = 0; j < itemArray.count; j++) {
             NSArray *item = [itemArray objectAtIndex:j];
             URPhonogramModel *model = [URPhonogramModel converFromArray:item];
-            [phonogramArray addObject:model];
+            if (model) {
+                if (![self.phonogramDict objectForKey:model.phonogram]) {
+                    [self.phonogramDict setValue:model forKey:model.phonogram];
+                }
+                [self.phonogramArray addObject:model];
+            }
         }
     }
-    return phonogramArray;
+}
+
+- (NSMutableDictionary *)phonogramDict
+{
+    if (!_phonogramDict) {
+        _phonogramDict = [[NSMutableDictionary alloc] init];
+    }
+    return _phonogramDict;
+}
+
+//    NSMutableArray * phonogramArray = [[NSMutableArray alloc] init];
+//    for (int i = 0; i < self.phonogramHorizontalArray.count; i++) {
+//        NSString *val = [self.phonogramHorizontalArray objectAtIndex:i];
+//
+//        for (int j = 0; j < itemArray.count; j++) {
+//            NSArray *item = [itemArray objectAtIndex:j];
+//            URPhonogramModel *model = [URPhonogramModel converFromArray:item];
+//            [phonogramArray addObject:model];
+//        }
+//    }
+//    return phonogramArray;
+//}
+
+- (URPhonogramModel *)getPhonogramInfo:(NSString *)key
+{
+    URPhonogramModel *item = [self.phonogramDict objectForKey:key];
+    if (!item) {
+        return nil;
+    }
+    
+    return item;
 }
 
 @end

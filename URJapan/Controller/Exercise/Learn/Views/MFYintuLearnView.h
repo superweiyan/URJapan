@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class URLearnPhonogramModel;
+
 @interface MFYintuLearnView : UIView
+
+@property (nonatomic, strong) URLearnPhonogramModel *phonogramModel;
 
 @end

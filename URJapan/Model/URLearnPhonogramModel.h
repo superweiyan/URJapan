@@ -9,13 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "URPhonogramModel.h"
 
-@interface URLearnPhonogramModel : NSObject
-
-@property (nonatomic, strong) URPhonogramModel  *phonogramModel;
-@property (nonatomic, strong) NSArray           *exampleArray;
-
-@end
-
 
 @interface URPhonogramExampleModel : NSObject
 
@@ -23,3 +16,11 @@
 @property (nonatomic, strong) NSString *chinaDesc;
 
 @end
+
+@interface URLearnPhonogramModel : NSObject
+
+@property (nonatomic, strong) URPhonogramModel                              *phonogramModel;
+@property (nonatomic, strong) NSArray<URPhonogramExampleModel *>            *exampleArray;
+
+@end
+

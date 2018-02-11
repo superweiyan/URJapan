@@ -80,7 +80,7 @@
 
 - (void)loadData
 {
-    _phonogramArray = [[URService shareObbject].phonogramService getFiftyPhonogram];
+    _phonogramArray = [URService shareObbject].phonogramService.phonogramArray;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

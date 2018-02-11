@@ -12,6 +12,8 @@
 
 @interface URPhonogramLearnService : NSObject
 
-- (URLearnPhonogramModel *)getLearnPhonogramInfo:(NSUInteger)level;
+- (NSArray *)getLearnLevelArray:(NSUInteger)level;
+
+- (URLearnPhonogramModel *)getLearnPhonogramItemInfo:(NSString *)key;
 
 @end

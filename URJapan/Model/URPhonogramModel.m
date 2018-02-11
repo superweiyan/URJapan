@@ -15,7 +15,9 @@
 //{
 //    URPhonogramModel *model = [[URPhonogramModel alloc] init];
 //    model.phonogram = [json getStringForKey:@""];
-//    model.
+//    model.kata = [json getStringForKey:@""];
+//    model.Hiragana = [json getStringForKey:@""];
+//    return model;
 //}
 
 + (URPhonogramModel *)converFromArray:(NSArray *) array
