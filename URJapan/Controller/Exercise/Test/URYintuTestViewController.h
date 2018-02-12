@@ -10,4 +10,6 @@
 
 @interface URYintuTestViewController : UIViewController
 
+@property (nonatomic, assign) NSUInteger level;
+
 @end

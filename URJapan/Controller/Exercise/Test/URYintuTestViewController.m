@@ -19,11 +19,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     DefaultBGColor()
+    
+    [self initViews];
+
+    self.navigationItem.title = [NSString stringWithFormat:@"第%ld关", (self.level+1)];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - init
+
+- (void)initViews
+{
+    
 }
 
 @end

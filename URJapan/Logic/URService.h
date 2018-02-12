@@ -11,11 +11,16 @@
 #import "URPhonogramService.h"
 #import "URPhonogramLearnService.h"
 
+//@class URPhonogramTestService;
+@class URPhonogramLevelService;
+
 @interface URService : NSObject
 
 + (URService *)shareObbject;
 
 @property (nonatomic, strong) URPhonogramService            * phonogramService;
-@property (nonatomic, strong) URPhonogramLearnService       * phonogramLearnService;
+//@property (nonatomic, strong) URPhonogramLearnService       * phonogramLearnService;
+//@property (nonatomic, strong) URPhonogramTestService        * phonoGramTestService;
+@property (nonatomic, strong) URPhonogramLevelService       * phonoGramlevalService;
 
 @end

@@ -11,6 +11,7 @@
 #import "Masonry/Masonry.h"
 #import "URLevelPathHelper.h"
 #import "URLevelSelectView.h"
+#import "URYintuTestViewController.h"
 
 @interface URYintuExerciseViewController ()
 
@@ -108,9 +109,12 @@
 {
     if (levelType == URLevelType_Learn) {
         [self.navigationController pushViewController:NewController(@"URYintuLearnViewController") animated:YES];
+        
     }
     else if (levelType == URLevelType_Test) {
-        [self.navigationController pushViewController:NewController(@"URYintuTestViewController") animated:YES];
+        URYintuTestViewController *testViewController = [[URYintuTestViewController alloc] init];
+        testViewController.level = level;
+        [self.navigationController pushViewController:testViewController animated:YES];
     }
 }
 

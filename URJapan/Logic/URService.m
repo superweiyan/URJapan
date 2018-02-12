@@ -7,6 +7,8 @@
 //
 
 #import "URService.h"
+//#import "URPhonogramTestService.h"
+#import "URPhonogramLevelService.h"
 
 @implementation URService
 
@@ -25,9 +27,17 @@
     self = [super init];
     if (self) {
         self.phonogramService = [[URPhonogramService alloc] init];
-        self.phonogramLearnService = [[URPhonogramLearnService alloc] init];
+//        self.phonogramLearnService = [[URPhonogramLearnService alloc] init];
     }
     return self;
+}
+
+- (URPhonogramLevelService *)phonoGramlevalService
+{
+    if (!_phonoGramlevalService) {
+        _phonoGramlevalService = [[URPhonogramLevelService alloc] init];
+    }
+    return _phonoGramlevalService;
 }
 
 @end

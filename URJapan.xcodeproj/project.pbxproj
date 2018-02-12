@@ -28,6 +28,8 @@
 		6E392134201317B900F4CA7A /* URCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E392133201317B900F4CA7A /* URCard.m */; };
 		6E7760E220302B260018A462 /* URTTSHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7760E120302B260018A462 /* URTTSHelper.m */; };
 		6E7760E5203032FA0018A462 /* URTTSTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7760E4203032FA0018A462 /* URTTSTestView.m */; };
+		6E7760F4203185C50018A462 /* URPhonogramTestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7760F3203185C50018A462 /* URPhonogramTestService.m */; };
+		6E7761002031B9330018A462 /* URPhonogramLevelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7760FF2031B9320018A462 /* URPhonogramLevelService.m */; };
 		6EBF7783200E35A300790305 /* NSString+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBF7782200E35A300790305 /* NSString+helper.m */; };
 		6EEB591120187F5500CA34D1 /* 50音图.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EEB591020187F5500CA34D1 /* 50音图.jpg */; };
 		6EEB59142018855400CA34D1 /* URYintuExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEB59132018855400CA34D1 /* URYintuExerciseViewController.m */; };
@@ -214,6 +216,10 @@
 		6E7760E120302B260018A462 /* URTTSHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URTTSHelper.m; sourceTree = "<group>"; };
 		6E7760E3203032FA0018A462 /* URTTSTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URTTSTestView.h; sourceTree = "<group>"; };
 		6E7760E4203032FA0018A462 /* URTTSTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URTTSTestView.m; sourceTree = "<group>"; };
+		6E7760F2203185C50018A462 /* URPhonogramTestService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URPhonogramTestService.h; sourceTree = "<group>"; };
+		6E7760F3203185C50018A462 /* URPhonogramTestService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URPhonogramTestService.m; sourceTree = "<group>"; };
+		6E7760FE2031B9320018A462 /* URPhonogramLevelService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URPhonogramLevelService.h; sourceTree = "<group>"; };
+		6E7760FF2031B9320018A462 /* URPhonogramLevelService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URPhonogramLevelService.m; sourceTree = "<group>"; };
 		6EBF7781200E35A300790305 /* NSString+helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+helper.h"; sourceTree = "<group>"; };
 		6EBF7782200E35A300790305 /* NSString+helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+helper.m"; sourceTree = "<group>"; };
 		6EEB591020187F5500CA34D1 /* 50音图.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "50音图.jpg"; sourceTree = "<group>"; };
@@ -517,6 +523,10 @@
 				6EFC0211200867E900D44DA4 /* URService.m */,
 				6E1F78E1202DA48F002B1C9F /* URPhonogramLearnService.h */,
 				6E1F78E2202DA48F002B1C9F /* URPhonogramLearnService.m */,
+				6E7760F2203185C50018A462 /* URPhonogramTestService.h */,
+				6E7760F3203185C50018A462 /* URPhonogramTestService.m */,
+				6E7760FE2031B9320018A462 /* URPhonogramLevelService.h */,
+				6E7760FF2031B9320018A462 /* URPhonogramLevelService.m */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -1155,9 +1165,11 @@
 				A05E8A171F6BCDC7009CF6EB /* URLogger.m in Sources */,
 				A08092161F6C3A7D007CFAE2 /* URMainViewController.m in Sources */,
 				6EFC02FE200C4C9E00D44DA4 /* URMeSettingViewController.m in Sources */,
+				6E7761002031B9330018A462 /* URPhonogramLevelService.m in Sources */,
 				A080921A1F6C3AC8007CFAE2 /* URSplashView.m in Sources */,
 				6EFC021A2008988D00D44DA4 /* URPhonogramItemCollectionViewCell.m in Sources */,
 				6EFC0302200C4FFF00D44DA4 /* URLabViewController.m in Sources */,
+				6E7760F4203185C50018A462 /* URPhonogramTestService.m in Sources */,
 				6E1F78902028480B002B1C9F /* URLevelSelectView.m in Sources */,
 				6EFC020A2007687E00D44DA4 /* NSDictionary+URUtil.m in Sources */,
 				6E0ED92D1FE7ABB9004084CE /* URPhonogramViewController.m in Sources */,
