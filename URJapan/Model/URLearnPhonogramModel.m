@@ -15,3 +15,7 @@
 @implementation URPhonogramExampleModel
 
 @end
+
+@implementation URPhonoQuestionModel
+
+@end

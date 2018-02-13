@@ -10,6 +10,6 @@
 
 @interface URPhonogramTestService : NSObject
 
-- (NSArray *)getTestQuestion:(NSInteger)level;
+- (NSArray *)getTestQuestion:(NSArray *)itemArray;
 
 @end

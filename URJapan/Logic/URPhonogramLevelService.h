@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class URLearnPhonogramModel;
+
 @interface URPhonogramLevelService : NSObject
 
 - (NSArray *)getLearnLevelArray:(NSUInteger)level;
 
 - (URLearnPhonogramModel *)getLearnPhonogramItemInfo:(NSString *)key;
+
+- (NSArray *)getQuestionArray:(NSUInteger)level;
 
 @end

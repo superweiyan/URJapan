@@ -30,6 +30,7 @@
 		6E7760E5203032FA0018A462 /* URTTSTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7760E4203032FA0018A462 /* URTTSTestView.m */; };
 		6E7760F4203185C50018A462 /* URPhonogramTestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7760F3203185C50018A462 /* URPhonogramTestService.m */; };
 		6E7761002031B9330018A462 /* URPhonogramLevelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7760FF2031B9320018A462 /* URPhonogramLevelService.m */; };
+		6E776104203293A80018A462 /* URPhonogramQuestionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E776103203293A80018A462 /* URPhonogramQuestionCollectionViewCell.m */; };
 		6EBF7783200E35A300790305 /* NSString+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBF7782200E35A300790305 /* NSString+helper.m */; };
 		6EEB591120187F5500CA34D1 /* 50音图.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EEB591020187F5500CA34D1 /* 50音图.jpg */; };
 		6EEB59142018855400CA34D1 /* URYintuExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEB59132018855400CA34D1 /* URYintuExerciseViewController.m */; };
@@ -220,6 +221,8 @@
 		6E7760F3203185C50018A462 /* URPhonogramTestService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URPhonogramTestService.m; sourceTree = "<group>"; };
 		6E7760FE2031B9320018A462 /* URPhonogramLevelService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URPhonogramLevelService.h; sourceTree = "<group>"; };
 		6E7760FF2031B9320018A462 /* URPhonogramLevelService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URPhonogramLevelService.m; sourceTree = "<group>"; };
+		6E776102203293A80018A462 /* URPhonogramQuestionCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URPhonogramQuestionCollectionViewCell.h; sourceTree = "<group>"; };
+		6E776103203293A80018A462 /* URPhonogramQuestionCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URPhonogramQuestionCollectionViewCell.m; sourceTree = "<group>"; };
 		6EBF7781200E35A300790305 /* NSString+helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+helper.h"; sourceTree = "<group>"; };
 		6EBF7782200E35A300790305 /* NSString+helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+helper.m"; sourceTree = "<group>"; };
 		6EEB591020187F5500CA34D1 /* 50音图.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "50音图.jpg"; sourceTree = "<group>"; };
@@ -466,6 +469,7 @@
 		6E1F789520284FA0002B1C9F /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				6E776101203293750018A462 /* Views */,
 				6E1F789920284FF1002B1C9F /* URYintuTestViewController.h */,
 				6E1F789A20284FF1002B1C9F /* URYintuTestViewController.m */,
 			);
@@ -557,6 +561,15 @@
 				6E3921302012E67F00F4CA7A /* URSwitchCardView.m */,
 				6E392132201317B900F4CA7A /* URCard.h */,
 				6E392133201317B900F4CA7A /* URCard.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6E776101203293750018A462 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6E776102203293A80018A462 /* URPhonogramQuestionCollectionViewCell.h */,
+				6E776103203293A80018A462 /* URPhonogramQuestionCollectionViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1201,6 +1214,7 @@
 				6EFC01FE200711A200D44DA4 /* URPhonogramService.m in Sources */,
 				6E1F78C9202C4314002B1C9F /* MFYintuLearnView.m in Sources */,
 				6EFC0212200867E900D44DA4 /* URService.m in Sources */,
+				6E776104203293A80018A462 /* URPhonogramQuestionCollectionViewCell.m in Sources */,
 				6E7760E220302B260018A462 /* URTTSHelper.m in Sources */,
 				A01EE6491F69669B000E0A98 /* main.m in Sources */,
 			);

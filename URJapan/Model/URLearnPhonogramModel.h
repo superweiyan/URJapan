@@ -24,3 +24,12 @@
 
 @end
 
+@interface URPhonoQuestionModel : NSObject
+
+@property (nonatomic, strong) NSString      *questionString;
+@property (nonatomic, strong) NSArray       *choiceArray;
+@property (nonatomic, assign) NSUInteger    rightAnswerIndex;
+@property (nonatomic, assign) BOOL          isAudioTest;
+
+@end
+

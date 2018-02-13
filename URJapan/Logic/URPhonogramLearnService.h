@@ -12,7 +12,7 @@
 
 @interface URPhonogramLearnService : NSObject
 
-- (NSArray *)getLearnLevelArray:(NSUInteger)level;
+@property (nonatomic, strong) NSDictionary *exampleDict;
 
 - (URLearnPhonogramModel *)getLearnPhonogramItemInfo:(NSString *)key;
 

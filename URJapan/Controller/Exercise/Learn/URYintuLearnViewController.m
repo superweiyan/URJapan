@@ -10,9 +10,8 @@
 #import "URMarco.h"
 #import "MFYintuLearnView.h"
 #import "Masonry/Masonry.h"
-#import "URLearnPhonogramModel.h"
 #import "URService.h"
-#import "URPhonogramLearnService.h"
+#import "URPhonogramLevelService.h"
 
 @interface URYintuLearnViewController ()
 
@@ -103,10 +102,10 @@
 - (void)initData
 {
     self.daraArray = [[NSMutableArray alloc] init];
-    NSArray *levelArray = [[URService shareObbject].phonogramLearnService getLearnLevelArray:0];
+    NSArray *levelArray = [[URService shareObbject].phonoGramlevalService getLearnLevelArray:0];
     for (int i = 0; i < levelArray.count; i++) {
         NSString *key = [levelArray objectAtIndex:i];
-        URLearnPhonogramModel *model = [[URService shareObbject].phonogramLearnService getLearnPhonogramItemInfo:key];
+        URLearnPhonogramModel *model = [[URService shareObbject].phonoGramlevalService getLearnPhonogramItemInfo:key];
         [self.daraArray addObject:model];
     }
     
