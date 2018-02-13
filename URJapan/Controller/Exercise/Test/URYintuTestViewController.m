@@ -21,6 +21,7 @@
 
 @property (nonatomic, strong) NSArray<URPhonoQuestionModel *>   *questionArray;
 @property (nonatomic, strong) URPhonoQuestionModel              *currentQuestionModel;
+@property (nonatomic, assign) NSInteger                         answerSelectIndex;
 
 @end
 
@@ -53,6 +54,9 @@
 - (void)initViews
 {
     self.questionLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    self.questionLabel.backgroundColor = [UIColor redColor];
+    self.questionLabel.font = [UIFont systemFontOfSize:36];
+    self.questionLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:self.questionLabel];
     
     [self.questionLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -84,6 +88,7 @@
 
 - (void)loadData
 {
+    self.answerSelectIndex = -1;
     self.questionArray = [[URService shareObbject].phonoGramlevalService getQuestionArray:self.level];
     
     self.currentQuestionModel = [self.questionArray firstObject];
@@ -104,8 +109,31 @@
     if (indexPath.row < self.currentQuestionModel.choiceArray.count) {
         NSString *word = [self.currentQuestionModel.choiceArray objectAtIndex:indexPath.row];
         cell.word = word;
+        cell.tag = indexPath.row;
+        [cell updateAnswer:self.answerSelectIndex rightAnswer:self.currentQuestionModel.rightAnswerIndex];
     }
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.answerSelectIndex >= 0) {
+        return ;
+    }
+    
+    self.answerSelectIndex = indexPath.row;
+    [self.itemCollectView reloadData];
+}
+
+- (int)checkAnswer:(NSInteger)rightIndex
+{
+    if (rightIndex == self.answerSelectIndex) {
+        return 1;
+    }
+    else if (rightIndex != self.answerSelectIndex) {
+        return -1;
+    }
+    return 0;
 }
 
 @end

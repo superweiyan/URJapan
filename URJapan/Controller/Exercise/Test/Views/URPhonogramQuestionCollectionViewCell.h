@@ -10,6 +10,8 @@
 
 @interface URPhonogramQuestionCollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, strong) NSString *word;
+@property (nonatomic, strong) NSString   *word;
+
+- (void)updateAnswer:(NSInteger)selectAnswerIndex rightAnswer:(NSInteger)rightAnswerIndex;
 
 @end
