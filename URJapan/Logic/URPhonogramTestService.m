@@ -33,17 +33,16 @@
 - (NSArray *)getRandonQuestionKeyItemArray:(NSUInteger)count
 {
     int x =  arc4random() % count;
+    NSMutableSet *itemSet = [[NSMutableSet alloc] init];
+    [itemSet addObject:@(x)];
     
     NSMutableArray * array = [[NSMutableArray alloc] init];
-    [array addObject:(@(x))];
-    
-    NSMutableSet *itemSet = [[NSMutableSet alloc] init];
     
     for (int i = 0; i < (count * 3); i++) {
         int y =  arc4random() % count;
         [itemSet addObject:@(y)];
         
-        if (itemSet.count >= 3) {
+        if (itemSet.count >= 4) {
             break;
         }
     }
@@ -62,18 +61,23 @@
     
     NSMutableArray *choiceArray = [[NSMutableArray alloc] init];
     
+    int questionIndex =  arc4random() % 4;
+    
     for(int i = 0; i < keyArray.count; i++) {
         NSNumber *val = [keyArray objectAtIndex:i];
         NSString *key = [itemArray objectAtIndex:val.integerValue];
         
         URPhonogramModel * phonogramModel = [[URService shareObbject].phonogramService getPhonogramInfo:key];
         
-        model.questionString = phonogramModel.phonogram;
+        if (questionIndex == i) {
+            model.questionString = phonogramModel.phonogram;
+        }
+        
         [choiceArray addObject:phonogramModel.kata];
     }
     
     model.choiceArray = choiceArray;
-    model.rightAnswerIndex = 0;
+    model.rightAnswerIndex = questionIndex;
 
     return model;
 }
