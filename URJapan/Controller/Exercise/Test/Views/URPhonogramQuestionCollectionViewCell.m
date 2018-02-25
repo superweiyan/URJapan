@@ -28,7 +28,6 @@
         [self addSubview:self.label];
         self.label.font = [UIFont systemFontOfSize:28];
         self.label.textAlignment = NSTextAlignmentCenter;
-        self.label.backgroundColor = [UIColor redColor];
         
         [self.label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.mas_equalTo(self);

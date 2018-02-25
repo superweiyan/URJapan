@@ -12,12 +12,15 @@
 #import "URLevelPathHelper.h"
 #import "URLevelSelectView.h"
 #import "URYintuTestViewController.h"
+#import "URService.h"
+#import "URRecordService.h"
+#import "URToast.h"
 
-@interface URYintuExerciseViewController ()
+@interface URYintuExerciseViewController ()<URLevelSelectViewDelegate>
 
-@property (nonatomic, strong) UIImageView   *bgImageView;
-@property (nonatomic, strong) NSArray       *levelArray;
-@property (nonatomic, weak)     URLevelSelectView  *selectView;
+@property (nonatomic, strong) UIImageView           *bgImageView;
+@property (nonatomic, strong) NSArray               *levelArray;
+@property (nonatomic, weak)   URLevelSelectView     *selectView;
 
 @end
 
@@ -80,10 +83,22 @@
 - (void)onBtnClicked:(id)sender
 {
     UIButton *btn = (UIButton *)sender;
+    NSUInteger level = btn.tag;
+    
+    if (level > 0) {
+        NSUInteger currentLevel = [[URService shareObbject].recordService getPastLevel:@"yuyin"];
+        if (level > currentLevel) {
+            [URToast showTitle:@"先学上一课吧"];
+            return ;
+        }
+    }
+    
+    
     URLevelSelectView *view = [[URLevelSelectView alloc] init];
     view.backgroundColor = [UIColor blueColor];
+    view.delegate = self;
     [self.view addSubview:view];
-    view.level = btn.tag;;
+    view.level = level;
     [view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(200, 150));
         make.centerX.mas_equalTo(self.view);
@@ -103,6 +118,12 @@
         weakSelf.selectView = nil;
         [weakSelf jumpLevel:type level:level];
     };
+}
+
+- (void)onCloseSelectView
+{
+    [self.selectView removeFromSuperview];
+    self.selectView = nil;
 }
 
 - (void)jumpLevel:(URLevelType)levelType level:(NSUInteger)level

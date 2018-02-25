@@ -27,6 +27,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor redColor];
+        self.titleLabel = [[UILabel alloc] initWithFrame:self.bounds];
+        [self addSubview:self.titleLabel];
     }
     return self;
 }

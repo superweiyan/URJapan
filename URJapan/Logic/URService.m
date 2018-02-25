@@ -9,6 +9,7 @@
 #import "URService.h"
 //#import "URPhonogramTestService.h"
 #import "URPhonogramLevelService.h"
+#import "URRecordService.h"
 
 @implementation URService
 
@@ -38,6 +39,14 @@
         _phonoGramlevalService = [[URPhonogramLevelService alloc] init];
     }
     return _phonoGramlevalService;
+}
+
+- (URRecordService *)recordService
+{
+    if (!_recordService) {
+        _recordService = [[URRecordService alloc] init];
+    }
+    return _recordService;
 }
 
 @end

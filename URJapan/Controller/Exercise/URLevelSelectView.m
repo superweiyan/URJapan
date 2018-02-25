@@ -31,6 +31,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        [self initData];
         [self initViews];
     }
     return self;
@@ -65,6 +66,14 @@
     }];
 }
 
+- (void)initData
+{
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapGesture:)];
+    [self addGestureRecognizer:tapGesture];
+}
+
+#pragma mark - action
+
 - (void)onLearnClicked
 {
     SafetyCallblock(self.levelClickback, URLevelType_Learn, self.level);
@@ -73,6 +82,13 @@
 - (void)onTestClicked
 {
     SafetyCallblock(self.levelClickback, URLevelType_Test, self.level);
+}
+
+- (void)onTapGesture:(UIGestureRecognizer *)gesture
+{
+    if(self.delegate && [self.delegate respondsToSelector:@selector(onCloseSelectView)]){
+        [self.delegate onCloseSelectView];
+    }
 }
 
 @end

@@ -31,6 +31,8 @@
 		6E7760F4203185C50018A462 /* URPhonogramTestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7760F3203185C50018A462 /* URPhonogramTestService.m */; };
 		6E7761002031B9330018A462 /* URPhonogramLevelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7760FF2031B9320018A462 /* URPhonogramLevelService.m */; };
 		6E776104203293A80018A462 /* URPhonogramQuestionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E776103203293A80018A462 /* URPhonogramQuestionCollectionViewCell.m */; };
+		6EBA17452042609000B4F63F /* URTestResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBA17442042609000B4F63F /* URTestResultView.m */; };
+		6EBA17482042AE2300B4F63F /* URRecordService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBA17472042AE2300B4F63F /* URRecordService.m */; };
 		6EBF7783200E35A300790305 /* NSString+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBF7782200E35A300790305 /* NSString+helper.m */; };
 		6EEB591120187F5500CA34D1 /* 50音图.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EEB591020187F5500CA34D1 /* 50音图.jpg */; };
 		6EEB59142018855400CA34D1 /* URYintuExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEB59132018855400CA34D1 /* URYintuExerciseViewController.m */; };
@@ -223,6 +225,10 @@
 		6E7760FF2031B9320018A462 /* URPhonogramLevelService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URPhonogramLevelService.m; sourceTree = "<group>"; };
 		6E776102203293A80018A462 /* URPhonogramQuestionCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URPhonogramQuestionCollectionViewCell.h; sourceTree = "<group>"; };
 		6E776103203293A80018A462 /* URPhonogramQuestionCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URPhonogramQuestionCollectionViewCell.m; sourceTree = "<group>"; };
+		6EBA17432042609000B4F63F /* URTestResultView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URTestResultView.h; sourceTree = "<group>"; };
+		6EBA17442042609000B4F63F /* URTestResultView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URTestResultView.m; sourceTree = "<group>"; };
+		6EBA17462042AE2300B4F63F /* URRecordService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URRecordService.h; sourceTree = "<group>"; };
+		6EBA17472042AE2300B4F63F /* URRecordService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URRecordService.m; sourceTree = "<group>"; };
 		6EBF7781200E35A300790305 /* NSString+helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+helper.h"; sourceTree = "<group>"; };
 		6EBF7782200E35A300790305 /* NSString+helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+helper.m"; sourceTree = "<group>"; };
 		6EEB591020187F5500CA34D1 /* 50音图.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "50音图.jpg"; sourceTree = "<group>"; };
@@ -531,6 +537,8 @@
 				6E7760F3203185C50018A462 /* URPhonogramTestService.m */,
 				6E7760FE2031B9320018A462 /* URPhonogramLevelService.h */,
 				6E7760FF2031B9320018A462 /* URPhonogramLevelService.m */,
+				6EBA17462042AE2300B4F63F /* URRecordService.h */,
+				6EBA17472042AE2300B4F63F /* URRecordService.m */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -570,6 +578,8 @@
 			children = (
 				6E776102203293A80018A462 /* URPhonogramQuestionCollectionViewCell.h */,
 				6E776103203293A80018A462 /* URPhonogramQuestionCollectionViewCell.m */,
+				6EBA17432042609000B4F63F /* URTestResultView.h */,
+				6EBA17442042609000B4F63F /* URTestResultView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1181,6 +1191,7 @@
 				6E7761002031B9330018A462 /* URPhonogramLevelService.m in Sources */,
 				A080921A1F6C3AC8007CFAE2 /* URSplashView.m in Sources */,
 				6EFC021A2008988D00D44DA4 /* URPhonogramItemCollectionViewCell.m in Sources */,
+				6EBA17452042609000B4F63F /* URTestResultView.m in Sources */,
 				6EFC0302200C4FFF00D44DA4 /* URLabViewController.m in Sources */,
 				6E7760F4203185C50018A462 /* URPhonogramTestService.m in Sources */,
 				6E1F78902028480B002B1C9F /* URLevelSelectView.m in Sources */,
@@ -1217,6 +1228,7 @@
 				6E776104203293A80018A462 /* URPhonogramQuestionCollectionViewCell.m in Sources */,
 				6E7760E220302B260018A462 /* URTTSHelper.m in Sources */,
 				A01EE6491F69669B000E0A98 /* main.m in Sources */,
+				6EBA17482042AE2300B4F63F /* URRecordService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

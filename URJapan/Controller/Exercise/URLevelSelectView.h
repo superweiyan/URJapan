@@ -13,9 +13,17 @@ typedef NS_ENUM(NSUInteger, URLevelType) {
     URLevelType_Test = 1
 };
 
+@protocol URLevelSelectViewDelegate<NSObject>
+
+- (void)onCloseSelectView;
+
+@end
+
 typedef void (^onLevelClickCallback)(URLevelType levelType, NSUInteger level);
 
 @interface URLevelSelectView : UIView
+
+@property (nonatomic, weak) id<URLevelSelectViewDelegate> delegate;
 
 @property (nonatomic, assign) NSUInteger level;
 

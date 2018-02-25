@@ -13,6 +13,7 @@
 
 //@class URPhonogramTestService;
 @class URPhonogramLevelService;
+@class URRecordService;
 
 @interface URService : NSObject
 
@@ -22,5 +23,6 @@
 //@property (nonatomic, strong) URPhonogramLearnService       * phonogramLearnService;
 //@property (nonatomic, strong) URPhonogramTestService        * phonoGramTestService;
 @property (nonatomic, strong) URPhonogramLevelService       * phonoGramlevalService;
+@property (nonatomic, strong) URRecordService               * recordService;
 
 @end
