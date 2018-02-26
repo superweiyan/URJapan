@@ -33,6 +33,7 @@
 		6E776104203293A80018A462 /* URPhonogramQuestionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E776103203293A80018A462 /* URPhonogramQuestionCollectionViewCell.m */; };
 		6EBA17452042609000B4F63F /* URTestResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBA17442042609000B4F63F /* URTestResultView.m */; };
 		6EBA17482042AE2300B4F63F /* URRecordService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBA17472042AE2300B4F63F /* URRecordService.m */; };
+		6EBA17542043E9D200B4F63F /* URThemeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBA17532043E9D200B4F63F /* URThemeConfig.m */; };
 		6EBF7783200E35A300790305 /* NSString+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBF7782200E35A300790305 /* NSString+helper.m */; };
 		6EEB591120187F5500CA34D1 /* 50音图.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EEB591020187F5500CA34D1 /* 50音图.jpg */; };
 		6EEB59142018855400CA34D1 /* URYintuExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEB59132018855400CA34D1 /* URYintuExerciseViewController.m */; };
@@ -229,6 +230,8 @@
 		6EBA17442042609000B4F63F /* URTestResultView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URTestResultView.m; sourceTree = "<group>"; };
 		6EBA17462042AE2300B4F63F /* URRecordService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URRecordService.h; sourceTree = "<group>"; };
 		6EBA17472042AE2300B4F63F /* URRecordService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URRecordService.m; sourceTree = "<group>"; };
+		6EBA17522043E9D200B4F63F /* URThemeConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URThemeConfig.h; sourceTree = "<group>"; };
+		6EBA17532043E9D200B4F63F /* URThemeConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URThemeConfig.m; sourceTree = "<group>"; };
 		6EBF7781200E35A300790305 /* NSString+helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+helper.h"; sourceTree = "<group>"; };
 		6EBF7782200E35A300790305 /* NSString+helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+helper.m"; sourceTree = "<group>"; };
 		6EEB591020187F5500CA34D1 /* 50音图.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "50音图.jpg"; sourceTree = "<group>"; };
@@ -772,6 +775,8 @@
 			children = (
 				6EFC0308200C883B00D44DA4 /* URToast.h */,
 				6EFC0309200C883B00D44DA4 /* URToast.m */,
+				6EBA17522043E9D200B4F63F /* URThemeConfig.h */,
+				6EBA17532043E9D200B4F63F /* URThemeConfig.m */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1214,6 +1219,7 @@
 				6E1F789420284EE5002B1C9F /* URYintuLearnViewController.m in Sources */,
 				6EFC02152008926D00D44DA4 /* URSystemUtils.m in Sources */,
 				6EFC01FB20070DDB00D44DA4 /* URConfigHelper.m in Sources */,
+				6EBA17542043E9D200B4F63F /* URThemeConfig.m in Sources */,
 				6E0ED9281FE797B5004084CE /* URMainPageViewController.m in Sources */,
 				6E3921312012E67F00F4CA7A /* URSwitchCardView.m in Sources */,
 				6E0ED9311FE7B7C3004084CE /* URMarco.m in Sources */,
