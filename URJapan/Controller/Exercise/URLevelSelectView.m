@@ -9,6 +9,7 @@
 #import "URLevelSelectView.h"
 #import "Masonry/Masonry.h"
 #import "URMarco.h"
+#import "URThemeConfig.h"
 
 @interface URLevelSelectView()
 
@@ -40,28 +41,32 @@
 - (void)initViews
 {
     self.learnBtn = [[UIButton alloc] init];
-    self.learnBtn.backgroundColor = [UIColor redColor];
+    self.learnBtn.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
     [self.learnBtn addTarget:self action:@selector(onLearnClicked)
             forControlEvents:UIControlEventTouchUpInside];
+    self.learnBtn.titleLabel.font = [UIFont systemFontOfSize:URBigFont];
     [self addSubview:self.learnBtn];
+    [self.learnBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.learnBtn setTitle:@"学习" forState:UIControlStateNormal];
     
     [self.learnBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self).mas_offset(5);
         make.centerY.mas_equalTo(self);
-        make.size.mas_equalTo(CGSizeMake(70, 40));
+        make.size.mas_equalTo(CGSizeMake(85, 40));
     }];
     
     self.testBtn = [[UIButton alloc] init];
-    self.testBtn.backgroundColor = [UIColor redColor];
+    self.testBtn.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
     [self.testBtn addTarget:self action:@selector(onTestClicked)
             forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.testBtn];
+    self.testBtn.titleLabel.font = [UIFont systemFontOfSize:URBigFont];
+    [self.testBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.testBtn setTitle:@"测试" forState:UIControlStateNormal];
     
     [self.testBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(self).mas_offset(-5);
-        make.size.mas_equalTo(CGSizeMake(70, 40));
+        make.size.mas_equalTo(CGSizeMake(85, 40));
         make.centerY.mas_equalTo(self);
     }];
 }

@@ -7,6 +7,7 @@
 //
 
 #import "URToast.h"
+#import "NSString+helper.h"
 
 @interface URToast()
 

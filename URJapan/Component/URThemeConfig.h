@@ -26,4 +26,8 @@
 #define weakColor   [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1]
 #define importColor   [UIColor colorWithRed:53/255.0 green:53/255.0 blue:53/255.0 alpha:1]
 
+#pragma mark - font
 
+#define URBigFont  24
+#define URDefaultFont 17
+#define URSmallFont 12

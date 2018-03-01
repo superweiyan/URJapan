@@ -50,7 +50,9 @@
 - (void)initViews
 {
     self.bgImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    self.bgImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.bgImageView.image = [UIImage imageWithContentsOfFile:ResourcePath(@"闯关背景.jpg")];
+    
     [self.view addSubview:self.bgImageView];
     
     [self.bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -95,7 +97,7 @@
     
     
     URLevelSelectView *view = [[URLevelSelectView alloc] init];
-    view.backgroundColor = [UIColor blueColor];
+    view.backgroundColor = [UIColor colorWithWhite:1 alpha:0.4];
     view.delegate = self;
     [self.view addSubview:view];
     view.level = level;
