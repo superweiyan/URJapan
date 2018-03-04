@@ -10,11 +10,14 @@
 #import "URMarco.h"
 #import "Masonry/Masonry.h"
 #import "URLevelPathHelper.h"
-#import "URLevelSelectView.h"
 #import "URYintuTestViewController.h"
+#import "URFaultWordViewController.h"
+
 #import "URService.h"
 #import "URRecordService.h"
+
 #import "URToast.h"
+#import "URLevelSelectView.h"
 
 @interface URYintuExerciseViewController ()<URLevelSelectViewDelegate>
 
@@ -66,7 +69,12 @@
         URPosition *position = [self.levelArray objectAtIndex:i];
         
         UIButton *btn = [[UIButton alloc] init];
-        btn.backgroundColor = [UIColor redColor];
+        [btn setTitle:@(i).stringValue forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        btn.titleLabel.font = [UIFont boldSystemFontOfSize:25];
+        btn.layer.cornerRadius = 25;
+        btn.layer.borderColor = [UIColor redColor].CGColor;
+        btn.layer.borderWidth = 2;
         btn.tag = i;
         [btn addTarget:self action:@selector(onBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:btn];
@@ -106,6 +114,7 @@
         make.centerX.mas_equalTo(self.view);
         make.centerY.mas_equalTo(self.view);
     }];
+    
     view.transform = CGAffineTransformMakeScale(0.1, 0.1);
     
     [UIView animateWithDuration:0.5 animations:^{
@@ -132,12 +141,16 @@
 {
     if (levelType == URLevelType_Learn) {
         [self.navigationController pushViewController:NewController(@"URYintuLearnViewController") animated:YES];
-        
     }
     else if (levelType == URLevelType_Test) {
         URYintuTestViewController *testViewController = [[URYintuTestViewController alloc] init];
         testViewController.level = level;
         [self.navigationController pushViewController:testViewController animated:YES];
+    }
+    else if (levelType == URLevelType_FaultWord) {
+        URFaultWordViewController *faultWordController = [[URFaultWordViewController alloc] init];
+        faultWordController.level = level;
+        [self.navigationController pushViewController:faultWordController animated:YES];
     }
 }
 

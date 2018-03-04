@@ -30,6 +30,13 @@
     return questionArray;
 }
 
+- (void)markFaultWord:(NSArray *)faultArray level:(NSUInteger)level
+{
+    
+}
+
+#pragma mark - private
+
 - (NSArray *)getRandonQuestionKeyItemArray:(NSUInteger)count
 {
     int x =  arc4random() % count;

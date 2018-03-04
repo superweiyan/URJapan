@@ -120,13 +120,15 @@
     self.answerSelectIndex = indexPath.row;
     
     if(self.currentQuestionModel.rightAnswerIndex != self.answerSelectIndex) {
-        [self.wrongQuestionArray addObject:@(self.currentQuestionIndex)];
+        URPhonoQuestionModel *questionModel = [self.questionArray objectAtIndex:self.currentQuestionIndex];
+        [self.wrongQuestionArray addObject:questionModel];
     }
     [self.itemCollectView reloadData];
     
     if (self.currentQuestionIndex == (self.questionArray.count - 1)) {
+        WeakSelf()
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self showResultView];
+            [weakSelf showResultView];
         });
     }
 }
@@ -171,7 +173,6 @@
 - (void)showResultView
 {
     URTestResultView *aView = [[URTestResultView alloc] initWithFrame:CGRectZero];
-    aView.backgroundColor = [UIColor blueColor];
     [self.view addSubview:aView];
     
     [aView updateInfo:(self.wrongQuestionArray.count < 2)

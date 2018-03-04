@@ -10,7 +10,8 @@
 
 typedef NS_ENUM(NSUInteger, URLevelType) {
     URLevelType_Learn = 0,
-    URLevelType_Test = 1
+    URLevelType_Test = 1,
+    URLevelType_FaultWord = 2
 };
 
 @protocol URLevelSelectViewDelegate<NSObject>

@@ -12,4 +12,6 @@
 
 - (NSArray *)getTestQuestion:(NSArray *)itemArray;
 
+- (void)markFaultWord:(NSArray *)faultArray level:(NSUInteger)level;
+
 @end

@@ -26,6 +26,7 @@
 		6E39212A20121F1300F4CA7A /* URExerciseContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E39212920121F1300F4CA7A /* URExerciseContentsViewController.m */; };
 		6E3921312012E67F00F4CA7A /* URSwitchCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3921302012E67F00F4CA7A /* URSwitchCardView.m */; };
 		6E392134201317B900F4CA7A /* URCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E392133201317B900F4CA7A /* URCard.m */; };
+		6E3C4F85204BF2EA000B01AF /* URFaultWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C4F84204BF2EA000B01AF /* URFaultWordViewController.m */; };
 		6E7760E220302B260018A462 /* URTTSHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7760E120302B260018A462 /* URTTSHelper.m */; };
 		6E7760E5203032FA0018A462 /* URTTSTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7760E4203032FA0018A462 /* URTTSTestView.m */; };
 		6E7760F4203185C50018A462 /* URPhonogramTestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7760F3203185C50018A462 /* URPhonogramTestService.m */; };
@@ -216,6 +217,8 @@
 		6E3921302012E67F00F4CA7A /* URSwitchCardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URSwitchCardView.m; sourceTree = "<group>"; };
 		6E392132201317B900F4CA7A /* URCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URCard.h; sourceTree = "<group>"; };
 		6E392133201317B900F4CA7A /* URCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URCard.m; sourceTree = "<group>"; };
+		6E3C4F83204BF2EA000B01AF /* URFaultWordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URFaultWordViewController.h; sourceTree = "<group>"; };
+		6E3C4F84204BF2EA000B01AF /* URFaultWordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URFaultWordViewController.m; sourceTree = "<group>"; };
 		6E7760E020302B260018A462 /* URTTSHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URTTSHelper.h; sourceTree = "<group>"; };
 		6E7760E120302B260018A462 /* URTTSHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URTTSHelper.m; sourceTree = "<group>"; };
 		6E7760E3203032FA0018A462 /* URTTSTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URTTSTestView.h; sourceTree = "<group>"; };
@@ -549,6 +552,7 @@
 		6E39212720121EA900F4CA7A /* Exercise */ = {
 			isa = PBXGroup;
 			children = (
+				6E3C4F82204BF2CC000B01AF /* FaultWord */,
 				6E1F78E4202DC4DA002B1C9F /* geojson */,
 				6E1F789520284FA0002B1C9F /* Test */,
 				6E1F789120284EB5002B1C9F /* Learn */,
@@ -574,6 +578,15 @@
 				6E392133201317B900F4CA7A /* URCard.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		6E3C4F82204BF2CC000B01AF /* FaultWord */ = {
+			isa = PBXGroup;
+			children = (
+				6E3C4F83204BF2EA000B01AF /* URFaultWordViewController.h */,
+				6E3C4F84204BF2EA000B01AF /* URFaultWordViewController.m */,
+			);
+			path = FaultWord;
 			sourceTree = "<group>";
 		};
 		6E776101203293750018A462 /* Views */ = {
@@ -1212,6 +1225,7 @@
 				6E7760E5203032FA0018A462 /* URTTSTestView.m in Sources */,
 				6EEB59142018855400CA34D1 /* URYintuExerciseViewController.m in Sources */,
 				A01EE64C1F69669B000E0A98 /* AppDelegate.m in Sources */,
+				6E3C4F85204BF2EA000B01AF /* URFaultWordViewController.m in Sources */,
 				6EFC030A200C883B00D44DA4 /* URToast.m in Sources */,
 				6E1F78E0202DA295002B1C9F /* URLearnPhonogramModel.m in Sources */,
 				6EBF7783200E35A300790305 /* NSString+helper.m in Sources */,

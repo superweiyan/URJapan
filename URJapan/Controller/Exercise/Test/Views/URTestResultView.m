@@ -13,6 +13,7 @@
 
 //@property (nonatomic, strong) UIImageView * resultImageView;
 @property (nonatomic, strong) UILabel       *resultLabel;
+@property (nonatomic, strong) UILabel       *subResultTipLabel;
 @property (nonatomic, strong) UILabel       *resultInfoLable;
 @property (nonatomic, strong) UIButton      *closeBtn;
 @end
@@ -39,7 +40,7 @@
 
 - (void)updateInfo:(BOOL)result all:(NSUInteger)all  wrong:(NSUInteger)wrong
 {
-    NSString *imageName = result == TRUE ? @"恭喜通关" : @"通关失败，\n再试一次吧";
+    NSString *imageName = result == TRUE ? @"恭喜通关" : @"通关失败";
 //    self.resultImageView.image = [UIImage imageNamed:imageName];
     self.resultLabel.text = imageName;
     
@@ -70,14 +71,21 @@
         make.size.mas_equalTo(CGSizeMake(150, 50));
     }];
     
+    self.subResultTipLabel = [[UILabel alloc] init];
+    [self addSubview:self.subResultTipLabel];
+    [self.subResultTipLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.resultLabel.mas_bottom).mas_offset(10);
+        make.left.right.mas_equalTo(self);
+    }];
+    
     self.resultInfoLable = [[UILabel alloc] initWithFrame:CGRectZero];
     self.resultInfoLable.textAlignment = NSTextAlignmentCenter;
     [self addSubview:self.resultInfoLable];
     
     [self.resultInfoLable mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.resultLabel.mas_bottom).mas_offset(10);
+        make.top.mas_equalTo(self.subResultTipLabel.mas_bottom).mas_offset(10);
         make.left.right.mas_equalTo(self);
-        make.bottom.mas_equalTo(self).mas_offset(-20);
+        make.height.mas_equalTo(50);
     }];
     
     self.closeBtn = [[UIButton alloc] initWithFrame:CGRectZero];
@@ -91,6 +99,7 @@
         make.top.mas_equalTo(self.resultInfoLable.mas_bottom);
         make.left.right.bottom.mas_equalTo(self);
     }];
+    
 }
 
 @end
