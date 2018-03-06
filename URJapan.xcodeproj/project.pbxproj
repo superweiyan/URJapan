@@ -27,6 +27,8 @@
 		6E3921312012E67F00F4CA7A /* URSwitchCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3921302012E67F00F4CA7A /* URSwitchCardView.m */; };
 		6E392134201317B900F4CA7A /* URCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E392133201317B900F4CA7A /* URCard.m */; };
 		6E3C4F85204BF2EA000B01AF /* URFaultWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C4F84204BF2EA000B01AF /* URFaultWordViewController.m */; };
+		6E3C4F9F204EBD29000B01AF /* URDatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C4F9E204EBD29000B01AF /* URDatabaseHelper.m */; };
+		6E3C4FA2204EBF41000B01AF /* URPathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C4FA1204EBF40000B01AF /* URPathUtils.m */; };
 		6E7760E220302B260018A462 /* URTTSHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7760E120302B260018A462 /* URTTSHelper.m */; };
 		6E7760E5203032FA0018A462 /* URTTSTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7760E4203032FA0018A462 /* URTTSTestView.m */; };
 		6E7760F4203185C50018A462 /* URPhonogramTestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7760F3203185C50018A462 /* URPhonogramTestService.m */; };
@@ -219,6 +221,10 @@
 		6E392133201317B900F4CA7A /* URCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URCard.m; sourceTree = "<group>"; };
 		6E3C4F83204BF2EA000B01AF /* URFaultWordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URFaultWordViewController.h; sourceTree = "<group>"; };
 		6E3C4F84204BF2EA000B01AF /* URFaultWordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URFaultWordViewController.m; sourceTree = "<group>"; };
+		6E3C4F9D204EBD29000B01AF /* URDatabaseHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URDatabaseHelper.h; sourceTree = "<group>"; };
+		6E3C4F9E204EBD29000B01AF /* URDatabaseHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URDatabaseHelper.m; sourceTree = "<group>"; };
+		6E3C4FA0204EBF40000B01AF /* URPathUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URPathUtils.h; sourceTree = "<group>"; };
+		6E3C4FA1204EBF40000B01AF /* URPathUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URPathUtils.m; sourceTree = "<group>"; };
 		6E7760E020302B260018A462 /* URTTSHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URTTSHelper.h; sourceTree = "<group>"; };
 		6E7760E120302B260018A462 /* URTTSHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URTTSHelper.m; sourceTree = "<group>"; };
 		6E7760E3203032FA0018A462 /* URTTSTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URTTSTestView.h; sourceTree = "<group>"; };
@@ -868,6 +874,8 @@
 				6EFC01FA20070DDB00D44DA4 /* URConfigHelper.m */,
 				6EFC02132008926D00D44DA4 /* URSystemUtils.h */,
 				6EFC02142008926D00D44DA4 /* URSystemUtils.m */,
+				6E3C4FA0204EBF40000B01AF /* URPathUtils.h */,
+				6E3C4FA1204EBF40000B01AF /* URPathUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -877,6 +885,8 @@
 			children = (
 				A05E8A151F6BCDC7009CF6EB /* URLogger.h */,
 				A05E8A161F6BCDC7009CF6EB /* URLogger.m */,
+				6E3C4F9D204EBD29000B01AF /* URDatabaseHelper.h */,
+				6E3C4F9E204EBD29000B01AF /* URDatabaseHelper.m */,
 			);
 			path = vender;
 			sourceTree = "<group>";
@@ -1239,6 +1249,7 @@
 				6E0ED9311FE7B7C3004084CE /* URMarco.m in Sources */,
 				6E1F78DB202DA1E9002B1C9F /* URLessionModel.m in Sources */,
 				A080921D1F6C3DA2007CFAE2 /* URCountDownBtn.m in Sources */,
+				6E3C4F9F204EBD29000B01AF /* URDatabaseHelper.m in Sources */,
 				6E1F78DD202DA1E9002B1C9F /* URPhonogramModel.m in Sources */,
 				6EFC02F52009F7C200D44DA4 /* URAudioPlayer.m in Sources */,
 				6E05DC272022032800B0DB8B /* URLevelPathHelper.m in Sources */,
@@ -1247,6 +1258,7 @@
 				6EFC0212200867E900D44DA4 /* URService.m in Sources */,
 				6E776104203293A80018A462 /* URPhonogramQuestionCollectionViewCell.m in Sources */,
 				6E7760E220302B260018A462 /* URTTSHelper.m in Sources */,
+				6E3C4FA2204EBF41000B01AF /* URPathUtils.m in Sources */,
 				A01EE6491F69669B000E0A98 /* main.m in Sources */,
 				6EBA17482042AE2300B4F63F /* URRecordService.m in Sources */,
 			);
